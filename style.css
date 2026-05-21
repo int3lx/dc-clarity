@@ -133,7 +133,15 @@ table {
 }
 
 .table-scroll thead tr {
-    /* background: white; */
+    background: white;
+}
+
+.table-db thead th {
+    border: 1px solid black;
+}
+
+.table-db tbody td {
+    border: 1px solid black;
 }
 
 td {
@@ -141,9 +149,9 @@ td {
     padding: 0.5rem;
 }
 
-th {
-    /* border: 1px solid black; */
-}
+/* th {
+    border: 1px solid black;
+} */
 
 button {
     width: 100%;
