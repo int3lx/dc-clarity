@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCFM Equipment Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="page-main">
@@ -25,30 +25,87 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Sample data rows -->
                     <tr>
-                        <td>Server A</td>
-                        <td>Model X</td>
-                        <td>SN123456</td>
-                        <td>Rack 1</td>
-                        <td>Operational</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_type">Equipment Type</label>
+                            <select name="dcfm_equipment_type" id="dcfm_equipment_type" required>
+                                <option value="">Select Equipment Type</option>
+                            </select>
+                        </td>
+                                <td colspan="2">
+                                        <label for="dcfm_equipment_id">Equipment ID</label>
+                                        <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" readonly required>
+                                </td>
+                                <td colspan="2">
+                                        <label for="dcfm_equipment_brand">Equipment Brand</label>
+                                        <input type="text" name="dcfm_equipment_brand" id="dcfm_equipment_brand" required>
+                                </td>
+                                <td colspan="2">
+                                        <label for="dcfm_equipment_spec">Equipment Specification or Capacity</label>
+                                        <input type="text" name="dcfm_equipment_spec" id="dcfm_equipment_spec" required>
+                                </td>
                     </tr>
                     <tr>
-                        <td>Switch B</td>
-                        <td>Model Y</td>
-                        <td>SN654321</td>
-                        <td>Rack 2</td>
-                        <td>Maintenance</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                                <td colspan="5">
+                                        <label for="dcfm_equipment_level_loc">Equipment Level Location</label>
+                                        <input type="text" name="dcfm_equipment_level_loc" id="dcfm_equipment_level_loc" required>
+                                </td>
+                                <td colspan="3">
+                                        <label for="dc_location">DC Location</label>
+                                        <select name="dc_location" id="dc_location" required>
+                                            <option value="">Select Location</option>
+                                        </select>
+                                </td>                        
                     </tr>
-                </tbody>
+                            <tr>
+                                <td colspan="4">
+                                        <label for="dcfm_equipment_supplier">Main Supplier Name</label>
+                                        <input type="text" name="dcfm_equipment_supplier" id="dcfm_equipment_supplier" required>
+                                </td>
+                                <td colspan="4">
+                                        <label for="dcfm_equipment_current_vendor">Current Vendor IFM</label>
+                                        <input type="text" name="dcfm_equipment_current_vendor" id="dcfm_equipment_current_vendor" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                        <label for="dcfm_equipment_serial_number">Asset Serial Number</label>
+                                        <input type="text" name="dcfm_equipment_serial_number" id="dcfm_equipment_serial_number" required>
+                                </td>
+                                <td colspan="3">
+                                        <label for="dcfm_equipment_tm_asset_number">TM Asset Number</label>
+                                        <input type="text" name="dcfm_equipment_tm_asset_number" id="dcfm_equipment_tm_asset_number" required>
+                                </td>
+                                <td colspan="2">
+                                        <label for="dcfm_equipment_designed_lifespan">Designed Lifespan (Years Max)</label>
+                                        <input type="number" name="dcfm_equipment_designed_lifespan" id="dcfm_equipment_designed_lifespan" min="0" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                        <label for="dcfm_equipment_install_date">Date Installed</label>
+                                        <input type="date" name="dcfm_equipment_install_date" id="dcfm_equipment_install_date" required>
+                                </td>
+                                <td colspan="4">
+                                        <label for="dcfm_equipment_last_maintenance_date">Last Maintenance Date</label>
+                                        <input type="date" name="dcfm_equipment_last_maintenance_date" id="dcfm_equipment_last_maintenance_date">
+                                </td>
+                            </tr>
 
+                </tbody>
+            </table>
+            <script>
+                // Auto-generate Equipment ID from selected DC Location and Equipment Type.
+                window.dclarityGlobal = window.dclarityGlobal || {};
+                window.dclarityGlobal.autoGenerateConfig = {
+                    listenerIds: ["dc_location", "dcfm_equipment_type"],
+                    sourceIds: ["dc_location", "dcfm_equipment_type"],
+                    targetId: "dcfm_equipment_id",
+                    format: "{dcfm_equipment_type}-{dc_location}"
+                };
+            </script>
         </div>
     </main>
+    <script src="dclarity-global-var.js"></script>
 </body>
 </html>
