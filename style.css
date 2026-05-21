@@ -124,9 +124,25 @@ table {
     min-width: 100%;
 }
 
+.table-scroll thead th {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2;
+}
+
+.table-scroll thead tr {
+    /* background: white; */
+}
+
 td {
     /* border: 1px solid black; */
-    padding: 0.75rem;
+    padding: 0.5rem;
+}
+
+th {
+    /* border: 1px solid black; */
 }
 
 button {
