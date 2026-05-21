@@ -40,6 +40,11 @@ body {
     */
 }
 
+.page-dev {
+    padding: 40px;
+    background-color: black;
+    color: white;
+}
 .page-content h1 {
     margin: 0 0 0.5rem;
     font-size: clamp(1.6rem, 2vw, 2rem);
@@ -56,6 +61,18 @@ body {
     /*
     color: var(--text-secondary);
     */
+}
+
+.page-dev h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.0rem, 2vw, 1.5rem);
+    letter-spacing: 0.01em;
+}
+
+.page-dev p {
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    font-size: 0.90rem;
 }
 
 label {
