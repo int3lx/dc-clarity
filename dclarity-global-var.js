@@ -44,6 +44,15 @@ window.dclarityGlobal.populateDCLocationDropdown = function() {
     this.populateSelect("dc_location", this.dcLocations, "Select Location");
 };
 
+window.dclarityGlobal.markRequiredLabels = function() {
+    document.querySelectorAll("label[for]").forEach(function(label) {
+        const target = document.getElementById(label.getAttribute("for"));
+        if (target && target.required) {
+            label.classList.add("required");
+        }
+    });
+};
+
 window.dclarityGlobal.getElementValue = function(id) {
     const element = document.getElementById(id);
     if (!element) {
@@ -135,6 +144,9 @@ if (typeof window !== "undefined") {
             }
             if (typeof window.dclarityGlobal.bindAutoGenerate === "function") {
                 window.dclarityGlobal.bindAutoGenerate();
+            }
+            if (typeof window.dclarityGlobal.markRequiredLabels === "function") {
+                window.dclarityGlobal.markRequiredLabels();
             }
         }
     });
