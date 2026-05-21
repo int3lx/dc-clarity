@@ -26,16 +26,16 @@
                 </thead>
                 <tbody>
                     <tr>
+                                <td colspan="2">
+                                        <label for="dcfm_equipment_id">Equipment ID</label>
+                                        <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" disabled>
+                                </td>
                         <td colspan="2">
                             <label for="dcfm_equipment_type">Equipment Type</label>
                             <select name="dcfm_equipment_type" id="dcfm_equipment_type" required>
                                 <option value="">Select Equipment Type</option>
                             </select>
                         </td>
-                                <td colspan="2">
-                                        <label for="dcfm_equipment_id">Equipment ID</label>
-                                        <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" readonly required>
-                                </td>
                                 <td colspan="2">
                                         <label for="dcfm_equipment_brand">Equipment Brand</label>
                                         <input type="text" name="dcfm_equipment_brand" id="dcfm_equipment_brand" required>
@@ -100,8 +100,8 @@
                 window.dclarityGlobal.autoGenerateConfig = {
                     listenerIds: ["dc_location", "dcfm_equipment_type"],
                     sourceIds: ["dc_location", "dcfm_equipment_type"],
-                    targetId: "dcfm_equipment_id",
-                    format: "{dcfm_equipment_type}-{dc_location}"
+                    targetId: "dcfm_equipment_id", // The ID of the input field to populate with the generated value.
+                    format: "{dc_location}-{dcfm_equipment_type}-[DB GENERATED SEQUENCE]", // Format for the generated ID. You can customize this as needed.
                 };
             </script>
         </div>
