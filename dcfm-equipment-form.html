@@ -72,12 +72,24 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5">
+                            <td colspan="2">
+                                <label for="dcfm_equipment_status">Equipment Status</label>
+                                <select name="dcfm_equipment_status" id="dcfm_equipment_status" required>
+                                    <option value="">Select Status</option>
+                                    <option value="Operational">Operational</option>
+                                    <option value="Under Maintenance">Under Maintenance</option>
+                                    <option value="Faulty">Faulty</option>
+                                    <option value="Decommissioned">Decommissioned</option>
+                                    <option value="Spare">Spare</option>
+                                    <option value="Disposed">Disposed</option>
+                                </select>
+                            </td>
+                            <td colspan="4">
                                 <label for="dcfm_equipment_detailed_loc">Equipment Detailed Location</label>
                                 <input type="text" name="dcfm_equipment_detailed_loc" id="dcfm_equipment_detailed_loc"
                                     required>
                             </td>
-                            <td colspan="3">
+                            <td colspan="2">
                                 <label for="dc_location">DC Location</label>
                                 <select name="dc_location" id="dc_location" required>
                                     <option value="">Select Location</option>
@@ -121,13 +133,14 @@
                             <td colspan="4">
                                 <label for="dcfm_equipment_last_maintenance_date">Last Maintenance Date</label>
                                 <input type="date" name="dcfm_equipment_last_maintenance_date"
-                                    id="dcfm_equipment_last_maintenance_date">
+                                    id="dcfm_equipment_last_maintenance_date" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="8">
                                 <label for="dcfm_equipment_note">Additional Notes</label>
-                                <textarea name="dcfm_equipment_note" id="dcfm_equipment_note" rows="4"></textarea>
+                                <textarea name="dcfm_equipment_note" id="dcfm_equipment_note" rows="4"
+                                    required></textarea>
                             </td>
                         </tr>
                         <tr>
