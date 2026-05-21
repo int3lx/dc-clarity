@@ -5,4 +5,80 @@
 body {
     margin: 0;
     min-height: 100vh;
+    /*
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    */
+}
+
+.page-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.75rem;
+    border: 1px solid black;
+    /*
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-primary);
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px var(--border-color),
+      0 24px 60px var(--shadow-color),
+      0 0 30px rgba(24, 0, 231, 0.12);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    */
+}
+
+.page-content h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    letter-spacing: 0.01em;
+    /*
+    color: var(--accent-primary);
+    */
+}
+
+.page-content p {
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    font-size: 0.98rem;
+    /*
+    color: var(--text-secondary);
+    */
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    /*
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 600;
+    */
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+    /*
+    border: 2px solid var(--accent-light);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    */
 }
