@@ -13,53 +13,58 @@
         <div class="page-content">
             <div class="page-dev">
                 <h1>Developer Notes</h1>
-                <p>This page is currently under development. The equipment listing will be displayed here once the
-                    development is complete.<br><br>
+                <p>This is not an auto-load list. Request to load list only be done when the "Load List" button clicked. The "DC Location" & "Equipment Type" work as filter to speed-up list loading. Leaving both unchanged will allow full list to be loaded from the database.<br><br>
+                    The list is loaded from the database as per table header placement with added extra column "Actions".
+                    View button will be created along with the DB data load and function as a link to
+                    dcfm-equipment-details.html to a spesific $dcfm_equipment_id<br><br>
+                    The DC Location & Equipment Type dropdown work as a filter
+                    Input in the table header act as a filter to related column.<br><br>                    
+                    The list table is set to auto overflow.<br><br>
                     Database refer to dcfm-equipment-db.html
-                    <button style="width: 10vw;" type="button" onclick="window.location.href = 'dcfm-equipment-db.html'">DCFM Equipment DB</button>
+                    <button style="width: 150px;" type="button"
+                        onclick="window.location.href = 'dcfm-equipment-db.html'">DCFM Equipment DB</button>
                 </p>
             </div>
             <h1>DCFM Equipment Listing</h1>
             <p>Data Center Facility Management recorded equipment listing.</p>
             <form>
-            <table>
-                <thead>
-                    <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
-                    <tr hidden>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2">
-                            <label for="dc_location">DC Location</label>
-                            <select name="dc_location" id="dc_location">
-                                <option value="">Select Location</option>
-                            </select>
-                        </td>
+                <table>
+                    <thead>
+                        <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
+                        <tr hidden>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <label for="dc_location">DC Location</label>
+                                <select name="dc_location" id="dc_location">
+                                    <option value="">Select Location</option>
+                                </select>
+                            </td>
                             <td colspan="2">
                                 <label for="dcfm_equipment_type">Equipment Type</label>
                                 <select name="dcfm_equipment_type" id="dcfm_equipment_type">
                                     <option value="">Select Equipment Type</option>
                                 </select>
                             </td>
-                        <td></td>
-                        <td></td>
-                        <td colspan="1">
-                            <button type="reset">Reset</button>
-                        </td>
-                        <td>
-                            <button type="submit">Submit</button>
-                        </td>
-                </tbody>
-            </table>
+                            <td></td>
+                            <td colspan="1">
+                                <button type="reset">Reset</button>
+                            </td>
+                            <td colspan="2">
+                                <button type="submit">Load List</button>
+                            </td>
+                    </tbody>
+                </table>
             </form>
             <div class="table-scroll" style="border: 1px solid black;">
                 <table id="equipment-table" style="table-layout: auto; white-space: nowrap;">
