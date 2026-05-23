@@ -1,148 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCFM Equipment Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="page-main">
         <div class="page-content">
             <div class="page-dev">
                 <h1>Developer Notes</h1>
-                <p>This page is currently under development. The detailed equipment information and preventive maintenance history for the selected equipments will be displayed here once the development is complete.</p>
+                <p>This page is currently under development. The detailed equipment information and preventive
+                    maintenance history for the selected equipments will be displayed here once the development is
+                    complete.</p>
             </div>
             <h1>DCFM Equipment Detail Information</h1>
-            <p>Data Center Facility Management detailed equipment informations & preventive maintenance history listing.</p>
+            <p>Data Center Facility Management detailed equipment informations & preventive maintenance history listing.
+            </p>
 
-                <table id="equipment-details">
+            <table id="equipment-details">
+                <thead>
+                    <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
+                    <tr hidden>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_id">Equipment ID</label>
+                            <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" disabled>
+                        </td>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_type">Equipment Type</label>
+                            <select name="dcfm_equipment_type" id="dcfm_equipment_type" required>
+                                <option value="">Select Equipment Type</option>
+                            </select>
+                        </td>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_brand">Equipment Brand</label>
+                            <input type="text" name="dcfm_equipment_brand" id="dcfm_equipment_brand" required>
+                        </td>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_spec">Equipment Specification or Capacity</label>
+                            <input type="text" name="dcfm_equipment_spec" id="dcfm_equipment_spec" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_status">Equipment Status</label>
+                            <select name="dcfm_equipment_status" id="dcfm_equipment_status" required>
+                                <option value="">Select Status</option>
+                                <option value="Operational">Operational</option>
+                                <option value="Under Maintenance">Under Maintenance</option>
+                                <option value="Faulty">Faulty</option>
+                                <option value="Decommissioned">Decommissioned</option>
+                                <option value="Spare">Spare</option>
+                                <option value="Disposed">Disposed</option>
+                            </select>
+                        </td>
+                        <td colspan="4">
+                            <label for="dcfm_equipment_detailed_loc">Equipment Detailed Location</label>
+                            <input type="text" name="dcfm_equipment_detailed_loc" id="dcfm_equipment_detailed_loc"
+                                required>
+                        </td>
+                        <td colspan="2">
+                            <label for="dc_location">DC Location</label>
+                            <select name="dc_location" id="dc_location" required>
+                                <option value="">Select Location</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <label for="dcfm_equipment_supplier">Main Supplier Name</label>
+                            <input type="text" name="dcfm_equipment_supplier" id="dcfm_equipment_supplier" required>
+                        </td>
+                        <td colspan="4">
+                            <label for="dcfm_equipment_current_vendor">Current Vendor IFM</label>
+                            <input type="text" name="dcfm_equipment_current_vendor" id="dcfm_equipment_current_vendor"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="dcfm_equipment_serial_number">Asset Serial Number</label>
+                            <input type="text" name="dcfm_equipment_serial_number" id="dcfm_equipment_serial_number"
+                                required>
+                        </td>
+                        <td colspan="3">
+                            <label for="dcfm_equipment_tm_asset_number">TM Asset Number</label>
+                            <input type="text" name="dcfm_equipment_tm_asset_number" id="dcfm_equipment_tm_asset_number"
+                                required>
+                        </td>
+                        <td colspan="2">
+                            <label for="dcfm_equipment_designed_lifespan">Designed Lifespan (Years Max)</label>
+                            <input type="number" name="dcfm_equipment_designed_lifespan"
+                                id="dcfm_equipment_designed_lifespan" min="0" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <label for="dcfm_equipment_install_date">Date Installed</label>
+                            <input type="date" name="dcfm_equipment_install_date" id="dcfm_equipment_install_date"
+                                required>
+                        </td>
+                        <td colspan="4">
+                            <label for="dcfm_equipment_last_maintenance_date">Last Maintenance Date</label>
+                            <input type="date" name="dcfm_equipment_last_maintenance_date"
+                                id="dcfm_equipment_last_maintenance_date" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">
+                            <label for="dcfm_equipment_note">Additional Notes</label>
+                            <textarea name="dcfm_equipment_note" id="dcfm_equipment_note" rows="4" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <button type="button">Edit</button>
+                        </td>
+                        <td colspan="1">
+                            <button type="button" disabled>Delete</button>
+                        </td>
+                        <td colspan="4"></td>
+                        <td colspan="1">
+                            <button type="button" disabled>Cancel</button>
+                        </td>
+                        <td colspan="1">
+                            <button type="submit" disabled>Update</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+<hr style="width: 75%;">
+
+            <h2>Equipment History</h2>
+            <p>List of event related to the equipment history</p>
+
+            <div class="table-scroll" style="border: 1px solid black;">
+                <table id="equipment-history" style="table-layout: auto; white-space: nowrap;">
                     <thead>
-                        <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
-                        <tr hidden>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                        </tr>
+
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="2">
-                                <label for="dcfm_equipment_id">Equipment ID</label>
-                                <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" disabled>
-                            </td>
-                            <td colspan="2">
-                                <label for="dcfm_equipment_type">Equipment Type</label>
-                                <select name="dcfm_equipment_type" id="dcfm_equipment_type" required>
-                                    <option value="">Select Equipment Type</option>
-                                </select>
-                            </td>
-                            <td colspan="2">
-                                <label for="dcfm_equipment_brand">Equipment Brand</label>
-                                <input type="text" name="dcfm_equipment_brand" id="dcfm_equipment_brand" required>
-                            </td>
-                            <td colspan="2">
-                                <label for="dcfm_equipment_spec">Equipment Specification or Capacity</label>
-                                <input type="text" name="dcfm_equipment_spec" id="dcfm_equipment_spec" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <label for="dcfm_equipment_status">Equipment Status</label>
-                                <select name="dcfm_equipment_status" id="dcfm_equipment_status" required>
-                                    <option value="">Select Status</option>
-                                    <option value="Operational">Operational</option>
-                                    <option value="Under Maintenance">Under Maintenance</option>
-                                    <option value="Faulty">Faulty</option>
-                                    <option value="Decommissioned">Decommissioned</option>
-                                    <option value="Spare">Spare</option>
-                                    <option value="Disposed">Disposed</option>
-                                </select>
-                            </td>
-                            <td colspan="4">
-                                <label for="dcfm_equipment_detailed_loc">Equipment Detailed Location</label>
-                                <input type="text" name="dcfm_equipment_detailed_loc" id="dcfm_equipment_detailed_loc"
-                                    required>
-                            </td>
-                            <td colspan="2">
-                                <label for="dc_location">DC Location</label>
-                                <select name="dc_location" id="dc_location" required>
-                                    <option value="">Select Location</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <label for="dcfm_equipment_supplier">Main Supplier Name</label>
-                                <input type="text" name="dcfm_equipment_supplier" id="dcfm_equipment_supplier" required>
-                            </td>
-                            <td colspan="4">
-                                <label for="dcfm_equipment_current_vendor">Current Vendor IFM</label>
-                                <input type="text" name="dcfm_equipment_current_vendor"
-                                    id="dcfm_equipment_current_vendor" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <label for="dcfm_equipment_serial_number">Asset Serial Number</label>
-                                <input type="text" name="dcfm_equipment_serial_number" id="dcfm_equipment_serial_number"
-                                    required>
-                            </td>
-                            <td colspan="3">
-                                <label for="dcfm_equipment_tm_asset_number">TM Asset Number</label>
-                                <input type="text" name="dcfm_equipment_tm_asset_number"
-                                    id="dcfm_equipment_tm_asset_number" required>
-                            </td>
-                            <td colspan="2">
-                                <label for="dcfm_equipment_designed_lifespan">Designed Lifespan (Years Max)</label>
-                                <input type="number" name="dcfm_equipment_designed_lifespan"
-                                    id="dcfm_equipment_designed_lifespan" min="0" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <label for="dcfm_equipment_install_date">Date Installed</label>
-                                <input type="date" name="dcfm_equipment_install_date" id="dcfm_equipment_install_date"
-                                    required>
-                            </td>
-                            <td colspan="4">
-                                <label for="dcfm_equipment_last_maintenance_date">Last Maintenance Date</label>
-                                <input type="date" name="dcfm_equipment_last_maintenance_date"
-                                    id="dcfm_equipment_last_maintenance_date" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="8">
-                                <label for="dcfm_equipment_note">Additional Notes</label>
-                                <textarea name="dcfm_equipment_note" id="dcfm_equipment_note" rows="4"
-                                    required></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="1">
-                                <button type="button">Edit</button>
-                            </td>
-                            <td colspan="1">
-                                <button type="button" disabled>Delete</button>
-                            </td>
-                            <td colspan="4"></td>
-                            <td colspan="1">
-                                <button type="button" disabled>Cancel</button>
-                            </td>
-                            <td colspan="1">
-                                <button type="submit" disabled>Update</button>
-                            </td>
-                        </tr>
-
+                        <!-- data loaded here -->
                     </tbody>
                 </table>
+            </div>
+
 
         </div>
     </main>
 </body>
+
 </html>
