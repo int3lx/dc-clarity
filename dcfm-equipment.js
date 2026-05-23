@@ -1,21 +1,23 @@
 // === CONFIGURATION ===
 const EQUIPMENT_TABLE_COLUMNS = [
   {key: 'actions', label: 'Actions'},
-  {key: 'id', label: 'ID'},
-  {key: 'type', label: 'Type'},
-  {key: 'brand', label: 'Brand'},
-  {key: 'spec', label: 'Spec'},
-  {key: 'status', label: 'Status'},
-  {key: 'location', label: 'Location'},
+  {key: 'id', label: 'Equipment ID'},
+  {key: 'type', label: 'Equipment Type'},
+  {key: 'brand', label: 'Equipment Brand'},
+  {key: 'spec', label: 'Specifications'},
+  {key: 'status', label: 'Equipment Status'},
+  {key: 'location', label: 'Detailed Location'},
   {key: 'dc', label: 'Datacenter'},
   {key: 'supplier', label: 'Supplier'},
-  {key: 'vendor', label: 'Vendor'},
+  {key: 'vendor', label: 'Current Vendor'},
   {key: 'sn', label: 'Serial Number'},
   {key: 'asset-tag', label: 'TM Asset Number'},
   {key: 'lifespan', label: 'Designed Lifespan'},
   {key: 'installed', label: 'Install Date'},
   {key: 'latest-pm', label: 'Last Maintenance Date'},
   {key: 'notes', label: 'Additional Notes'},
+  {key: 'created-by', label: 'Created By'},
+  {key: 'date-created', label: 'Date Created'},
 ];
 
 // Get predefined options from global var or fallback to empty
@@ -43,17 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-async function fetchJson(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`Failed to load ${path}`);
-  return res.json();
+// === HELPER FUNCTIONS ===
+async function fetchFromBackend(endpoint, params = {}) {
+  const queryString = new URLSearchParams(params).toString();
+  const url = endpoint + (queryString ? '?' + queryString : '');
+  
+  const res = await fetch(url);
+  const json = await res.json();
+  
+  if (json.status !== 'success') {
+    throw new Error(json.message || 'Backend error');
+  }
+  
+  return json;
 }
 
 async function initListPage() {
-  const dbPath = 'backend-database/dcfm-equipment-db.json';
-  let data = [];
-  try { data = await fetchJson(dbPath); } catch (e) { console.error(e); return; }
-
   const dcSelect = document.getElementById('dc_location');
   const typeSelect = document.getElementById('dcfm_equipment_type');
 
@@ -80,10 +87,25 @@ async function initListPage() {
     });
   }
 
-  document.getElementById('load_list_btn').addEventListener('click', (ev) => {
+  document.getElementById('load_list_btn').addEventListener('click', async (ev) => {
     ev.preventDefault();
     if (!confirm('Are you sure you want to load the list?')) return;
-    renderEquipmentTable(data);
+    
+    try {
+      const dc = dcSelect.value;
+      const type = typeSelect.value;
+      
+      // Fetch from backend
+      const response = await fetchFromBackend('backend-equipment-list/submit.php', {
+        dc: dc,
+        type: type
+      });
+      
+      renderEquipmentTable(response.data);
+    } catch (error) {
+      console.error('Error loading equipment list:', error);
+      alert('Failed to load equipment list: ' + error.message);
+    }
   });
 }
 
@@ -122,17 +144,13 @@ function renderEquipmentTable(data) {
   });
   thead.appendChild(fr);
 
-  // apply DC/type pre-filters
-  const dc = document.getElementById('dc_location').value;
-  const type = document.getElementById('dcfm_equipment_type').value;
+  // Data already filtered by backend, so render all
+  if (!data || data.length === 0) {
+    applyColumnFilters(table);
+    return;
+  }
 
-  const filtered = data.filter(d => {
-    if (dc && d.dc !== dc) return false;
-    if (type && d.type !== type) return false;
-    return true;
-  });
-
-  filtered.forEach(item => {
+  data.forEach(item => {
     const tr = document.createElement('tr');
     tr.style.verticalAlign = 'top';
 
@@ -141,6 +159,7 @@ function renderEquipmentTable(data) {
     const viewBtn = document.createElement('button');
     viewBtn.type = 'button';
     viewBtn.textContent = 'View';
+    viewBtn.style.height = '20px';
     viewBtn.addEventListener('click', () => {
       const id = item.id;
       window.location.href = `dcfm-equipment-details.html?id=${encodeURIComponent(id)}`;
@@ -188,9 +207,9 @@ function applyColumnFilters(table) {
   const statsEl = document.getElementById('equipment-list-stats');
   if (statsEl) {
     if (visibleCount === 0) {
-      statsEl.value = 'no match found';
+      statsEl.value = 'No match found';
     } else {
-      statsEl.value = `found ${visibleCount} match${visibleCount !== 1 ? 'es' : ''}`;
+      statsEl.value = `Found ${visibleCount} match${visibleCount !== 1 ? 'es' : ''}`;
     }
   }
 }
@@ -204,8 +223,6 @@ function getColumnIndexByKey(key) {
 async function initDetailsPage() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
-  const dbPath = 'backend-database/dcfm-equipment-db.json';
-  const histPath = 'backend-database/dcfm-equipment-history-db.json';
 
   // populate selects for type and dc with predefined options
   const dcSelect = document.getElementById('dc_location');
@@ -232,59 +249,61 @@ async function initDetailsPage() {
     }
   }
 
-  let data = [];
-  try { data = await fetchJson(dbPath); } catch(e){ console.error(e); }
-
   if (!id) return;
 
-  // find equipment
-  const item = data.find(d => d.id === id);
-  if (!item) return;
+  try {
+    // Fetch equipment details and history from backend
+    const response = await fetchFromBackend('backend-equipment-details/submit.php', { id: id });
+    
+    const item = response.equipment;
+    const history = response.history;
 
-  // helper to set value safely
-  const setVal = (idName, value) => {
-    const el = document.getElementById(idName);
-    if (!el) return;
-    if (el.tagName === 'SELECT') {
-      el.value = value ?? '';
-    } else if (el.type === 'date') {
-      if (!value) { el.value = ''; return; }
-      // input expects yyyy-mm-dd; source is dd/mm/yyyy
-      const parts = value.split('/');
-      if (parts.length === 3) {
-        const [d,m,y] = parts;
-        el.value = `${y.padStart(4,'0')}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`;
+    // helper to set value safely
+    const setVal = (idName, value) => {
+      const el = document.getElementById(idName);
+      if (!el) return;
+      if (el.tagName === 'SELECT') {
+        el.value = value ?? '';
+      } else if (el.type === 'date') {
+        if (!value) { el.value = ''; return; }
+        // input expects yyyy-mm-dd; source is dd/mm/yyyy
+        const parts = value.split('/');
+        if (parts.length === 3) {
+          const [d,m,y] = parts;
+          el.value = `${y.padStart(4,'0')}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`;
+        } else {
+          el.value = value;
+        }
       } else {
-        el.value = value;
+        el.value = value ?? '';
       }
-    } else {
-      el.value = value ?? '';
-    }
-  };
+    };
 
-  setVal('dcfm_equipment_id', item.id);
-  setVal('dcfm_equipment_type', item.type);
-  setVal('dcfm_equipment_brand', item.brand);
-  setVal('dcfm_equipment_spec', item.spec);
-  setVal('dcfm_equipment_status', item.status);
-  setVal('dcfm_equipment_detailed_loc', item.location);
-  setVal('dc_location', item.dc);
-  setVal('dcfm_equipment_supplier', item.supplier);
-  setVal('dcfm_equipment_current_vendor', item.vendor);
-  setVal('dcfm_equipment_serial_number', item.sn);
-  setVal('dcfm_equipment_tm_asset_number', item['asset-tag']);
-  setVal('dcfm_equipment_designed_lifespan', item.lifespan);
-  setVal('dcfm_equipment_install_date', item.installed);
-  setVal('dcfm_equipment_last_maintenance_date', item['latest-pm']);
-  setVal('dcfm_equipment_note', item.notes);
-  setVal('dcfm_equipment_create_by', item['created-by']);
-  setVal('dcfm_equipment_created_date', item['date-created']);
+    setVal('dcfm_equipment_id', item.id);
+    setVal('dcfm_equipment_type', item.type);
+    setVal('dcfm_equipment_brand', item.brand);
+    setVal('dcfm_equipment_spec', item.spec);
+    setVal('dcfm_equipment_status', item.status);
+    setVal('dcfm_equipment_detailed_loc', item.location);
+    setVal('dc_location', item.dc);
+    setVal('dcfm_equipment_supplier', item.supplier);
+    setVal('dcfm_equipment_current_vendor', item.vendor);
+    setVal('dcfm_equipment_serial_number', item.sn);
+    setVal('dcfm_equipment_tm_asset_number', item['asset-tag']);
+    setVal('dcfm_equipment_designed_lifespan', item.lifespan);
+    setVal('dcfm_equipment_install_date', item.installed);
+    setVal('dcfm_equipment_last_maintenance_date', item['latest-pm']);
+    setVal('dcfm_equipment_note', item.notes);
+    setVal('dcfm_equipment_create_by', item['created-by']);
+    setVal('dcfm_equipment_created_date', item['date-created']);
 
-  // load history
-  let hist = [];
-  try { hist = await fetchJson(histPath); } catch(e){ console.error(e); }
-  const related = hist.filter(h => h.id === id);
-  renderHistoryTable(related);
+    // Render history table
+    renderHistoryTable(history);
+    
+  } catch (error) {
+    console.error('Error loading equipment details:', error);
+    alert('Failed to load equipment details: ' + error.message);
+  }
 }
 
 function renderHistoryTable(entries) {
@@ -330,9 +349,9 @@ function renderHistoryTable(entries) {
   if (statsEl) {
     const count = entries.length;
     if (count === 0) {
-      statsEl.value = 'no history found';
+      statsEl.value = 'No history found';
     } else {
-      statsEl.value = `found ${count} record${count !== 1 ? 's' : ''}`;
+      statsEl.value = `Found ${count} record${count !== 1 ? 's' : ''}`;
     }
   }
 }

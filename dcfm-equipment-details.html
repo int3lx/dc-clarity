@@ -26,7 +26,7 @@
                             <td>Auto load equipment's detail & history data from dcfm-equipment-db.json &
                                 dcfm-equipment-history-db.json based on Equipment ID got from dcfm-equipment-list.html
                                 "View" button.</td>
-                            <td>Not started</td>
+                            <td>Done</td>
                         </tr>
                         <tr>
                             <td>Add "Actions" column header on the last column of the loaded equipment-history table and
@@ -110,6 +110,7 @@
                             </td>
                             <td colspan="2">
                                 <label for="dcfm_equipment_type">Equipment Type</label>
+                                <!-- <input type="text" name="dcfm_equipment_type" id="dcfm_equipment_type"> -->
                                 <select name="dcfm_equipment_type" id="dcfm_equipment_type" disabled>
                                     <option value="">Select Equipment Type</option>
                                 </select>
@@ -246,7 +247,7 @@
                     </tbody>
                 </table>
             </div>
-            <input type="text" name="equipment-history-stats" id="equipment-history-stats" disabled>
+            <input type="text" style="text-align: right;" name="equipment-history-stats" id="equipment-history-stats" disabled>
             <form action="backend-equipment-history/submit.php" method="post">
                 <table id="equipment-history-form">
                     <thead>
