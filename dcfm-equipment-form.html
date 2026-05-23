@@ -23,14 +23,41 @@
                     the
                     backend, and the frontend will simply display the generated ID in the disabled input field. The
                     auto-generated ID is processed in dcclarity-global-var.js while the data pointer is located in the
-                    dcfm-equipment-form.html script area file. <br><br>
-                    The Equipment Type & DC Location dropdowns will be populated with predefined values located in the
-                    dcclarity-global-var.js file. The frontend will fetch these values and populate the dropdowns
-                    accordingly when the form loads. This ensures that any update to the Equipment Types or DC Locations
-                    can
-                    be easily managed by updating the global variable file without needing to change the frontend code. <br><br>
-                    Database refer to dcfm-equipment-db.html
-                    <button style="width: 150px;" type="button" onclick="window.location.href = 'dcfm-equipment-db.html'">DCFM Equipment DB</button>
+                    dcfm-equipment-form.html script area file.
+                    
+                <table style="table-layout: auto;">
+                    <tbody>
+                        <tr>
+                            <td>Page structure</td>
+                            <td style="width: fit-content;">Done</td>
+                        </tr>
+                        <tr>
+                            <td>Auto-Generated Equipment ID</td>
+                            <td>In-progress</td>
+                        </tr>
+                        <tr>
+                            <td>Populate "DC Location" from global variable (dcclarity-global-var.js)</td>
+                            <td>Done</td>
+                        </tr>
+                        <tr>
+                            <td>Populate "Equipment Type" from global variable (dcclarity-global-var.js)</td>
+                            <td>Done</td>
+                        </tr>
+                        <tr>
+                            <td>Global red * for required input (dcclarity-global-var.js)</td>
+                            <td>Done</td>
+                        </tr>
+                        <tr>
+                            <td>Mock-up DB - DCFM Equipment's <a
+                                    href="backend-database/dcfm-equipment-db.json">Database</a></td>
+                            <td>Ready</td>
+                        </tr>
+                        <tr>
+                            <td>Submit button & backend stuff</td>
+                            <td>Not started</td>
+                        </tr>
+                    </tbody>
+                </table>
                 </p>
             </div>
 
@@ -151,8 +178,7 @@
                             </td>
                             <td colspan="5"></td>
                             <td colspan="1" style="text-align: center;">
-                                <button type="button"
-                                    onclick="window.location.href = 'dcfm-equipment-list.html';">Cancel</button>
+                                <button type="button" onclick="window.location.href = 'index.html';">Cancel</button>
                             </td>
                             <td colspan="1" style="text-align: center;">
                                 <button type="submit">Submit</button>
