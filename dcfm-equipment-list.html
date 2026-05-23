@@ -13,15 +13,44 @@
         <div class="page-content">
             <div class="page-dev">
                 <h1>Developer Notes</h1>
-                <p>This is not an auto-load list. Request to load list only be done when the "Load List" button clicked. The "DC Location" & "Equipment Type" work as filter to speed-up list loading. Leaving both unchanged will allow full list to be loaded from the database.<br><br>
-                    The list is loaded from the database as per table header placement with added extra column "Actions".
-                    View button will be created along with the DB data load and function as a link to
-                    dcfm-equipment-details.html to a spesific $dcfm_equipment_id<br><br>
-                    The DC Location & Equipment Type dropdown work as a filter
-                    Input in the table header act as a filter to related column.<br><br>                    
-                    The list table is set to auto overflow.<br><br>
-                    Database refer to dcfm-equipment-db.html
-                    <button style="width: 150px;" type="button" onclick="window.location.href = 'dcfm-equipment-db.html'">DCFM Equipment DB</button>
+                <p>This is not an auto-load list. Request to load list only be done when the "Load List" button clicked.
+                <table style="table-layout: auto;">
+                    <tbody>
+                        <tr>
+                            <td>Page structure</td>
+                            <td style="width: 100px;">Done</td>
+                        </tr>
+                        <tr>
+                            <td>"Load List" button backend stuff</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>"equipment-table" overflow setup to cap vertical and horizontal limit to avoid spill
+                            </td>
+                            <td>Done</td>
+                        </tr>
+                        <tr>
+                            <td>Load DB data based on pre-load filter "DC Location" and/or "Equipment Type" dropdown
+                                selections</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Add "Actions" at first column. Contain "View" button on each loaded row.</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Mock-up DB - DCFM Equipment's <a
+                                    href="backend-database/dcfm-equipment-db.json">Database</a></td>
+                            <td>Ready</td>
+                        </tr>
+                        <tr>
+                            <td>Auto-generated "View" button linked to
+                                dcfm-equipments-details.html via Equipment ID & backend stuff</td>
+                            <td>Not started</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 </p>
             </div>
             <h1>DCFM Equipment Listing</h1>
@@ -68,7 +97,7 @@
             <div class="table-scroll" style="border: 1px solid black;">
                 <table id="equipment-table" style="table-layout: auto; white-space: nowrap;">
                     <thead>
-                        
+
                     </thead>
                     <tbody>
                         <!-- data loaded here -->
