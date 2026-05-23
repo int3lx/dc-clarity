@@ -16,6 +16,43 @@
                 <p>This page is currently under development. The detailed equipment information and preventive
                     maintenance history for the selected equipments will be displayed here once the development is
                     complete.</p>
+                <table style="table-layout: auto;">
+                    <tbody>
+                        <tr>
+                            <td>Page structure</td>
+                            <td style="width: 100px;">In-progress</td>
+                        </tr>
+                        <tr>
+                            <td>Auto load equipment's detail & history data from dcfm-equipment-db.json  & dcfm-equipment-history-db.json based on Equipment ID got from dcfm-equipment-list.html "View" button.</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Detail section "Edit" button function</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Detail section "Delete" button function</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Detail section "Cancel" button function</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Detail section "Update" button function</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>History section "Add Event" button funtion</td>
+                            <td>Not started</td>
+                        </tr>
+                        <tr>
+                            <td>Add logic to auto update dcfm_equipment_last_maintenance_date if the equipment_history_event value "Preventive Maintenance" is submitted.</td>
+                            <td>Not started</td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
             <h1>DCFM Equipment Detail Information</h1>
             <p>Data Center Facility Management detailed equipment informations & preventive maintenance history listing.
@@ -146,7 +183,7 @@
                 </tbody>
             </table>
 
-<hr style="width: 75%;">
+            <hr style="width: 75%;">
 
             <h2>Equipment History</h2>
             <p>List of event related to the equipment history</p>
@@ -161,10 +198,64 @@
                     </tbody>
                 </table>
             </div>
+            <form action="backend-equipment-history/submit.php" method="post">
+            <table id="equipment-history-form">
+                <thead>
+                    <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
+                    <tr hidden>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <label for="equipment_history_date">Date</label>
+                            <input type="date" name="equipment_history_date" id="equipment_history_date" required>
+                        </td>
+                        <td colspan="2">
+                            <label for="equipment_history_event">Event</label>
+                            <select name="equipment_history_event" id="equipment_history_event" required>
+                            <option value="">Select event</option>
+                            <option value="Preventive Maintenance">Preventive Maintenance</option>
+                            <option value="Disposed">Disposed</option>
+                            <option value="Breakdown">Breakdown</option>
+                            <option value="Relocate">Relocate</option>
+                            <option value="Part Order">Part Order</option>
+                            <option value="Other">Other</option>
+                            </select>
+                        </td>
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">
+                            <label for="equipment_history_desc">Description</label>
+                            <textarea name="equipment_history_desc" id="equipment_history_desc" rows="4" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <button type="reset">Reset</button>
+                        </td>
+                        <td colspan="5"></td>
+                        <td colspan="2">
+                            <button type="submit">Add Event</button>
+                        </td>
+                    </tr>
 
+                </tbody>
+            </table>
+            </form>
 
         </div>
     </main>
+    <script src="dclarity-global-var.js"></script>
 </body>
 
 </html>
