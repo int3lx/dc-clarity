@@ -170,14 +170,14 @@
                         </tr>
                         <tr>
                             <td colspan="1">
-                                <button type="reset">Reset</button>
+                                <button type="reset" onclick="return confirm('Are you sure you want to reset this form?');">Reset</button>
                             </td>
                             <td colspan="5"></td>
                             <td colspan="1" style="text-align: center;">
-                                <button type="button" onclick="window.location.href = 'index.html';">Cancel</button>
+                                <button type="button" onclick="if (confirm('Are you sure you want to cancel?')) { window.location.href = 'index.html';}">Cancel</button>
                             </td>
                             <td colspan="1" style="text-align: center;">
-                                <button type="submit">Submit</button>
+                                <button type="submit" onclick="return confirm('Are you sure you want to submit this form?');">Submit</button>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             </script>
         </div>
     </main>
-    <script src="dclarity-global-var.js"></script>
+    <script src="dcclarity-global-var.js"></script>
 </body>
 
 </html>

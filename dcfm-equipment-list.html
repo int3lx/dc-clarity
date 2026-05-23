@@ -83,10 +83,10 @@
                             </td>
                             <td></td>
                             <td colspan="1">
-                                <button type="reset">Reset</button>
+                                <button type="reset" onclick="return confirm('Are you sure you want to reset this form?');">Reset</button>
                             </td>
                             <td colspan="2">
-                                <button type="submit" id="load_list_btn">Load List</button>
+                                <button type="submit" id="load_list_btn" onclick="return confirm('Are you sure you want to load the list?');">Load List</button>
                             </td>
                     </tbody>
                 </table>
@@ -103,7 +103,7 @@
             </div>
         </div>
     </main>
-    <script src="dclarity-global-var.js"></script>
+    <script src="dcclarity-global-var.js"></script>
 </body>
 
 </html>
