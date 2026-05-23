@@ -196,6 +196,16 @@
                             </td>
                         </tr>
                         <tr>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_create_by">Equipment Details - Created By</label>
+                                <input type="text" name="dcfm_equipment_create_by" id="dcfm_equipment_create_by" disabled>
+                            </td>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_created_date">Equipment Details - Created Date</label>
+                                <input type="text" name="dcfm_equipment_created_date" id="dcfm_equipment_created_date" disabled>
+                            </td>
+                        </tr>
+                        <tr>
                             <td colspan="1">
                                 <button type="button"
                                     onclick="if(confirm('Are you sure you want to proceed?')) { alert('Action confirmed!'); }">Edit</button>
@@ -236,6 +246,7 @@
                     </tbody>
                 </table>
             </div>
+            <input type="text" name="equipment-history-stats" id="equipment-history-stats" disabled>
             <form action="backend-equipment-history/submit.php" method="post">
                 <table id="equipment-history-form">
                     <thead>
@@ -297,6 +308,7 @@
         </div>
     </main>
     <script src="dcclarity-global-var.js"></script>
+    <script src="dcfm-equipment.js"></script>
 </body>
 
 </html>

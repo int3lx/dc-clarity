@@ -122,7 +122,7 @@ table {
 
 .table-scroll table {
     min-width: 100%;
-    min-height: 45vh;
+    min-height: 10vh;
 }
 
 .table-scroll thead th {

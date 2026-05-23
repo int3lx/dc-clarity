@@ -86,7 +86,7 @@
                                 <button type="reset" onclick="return confirm('Are you sure you want to reset this form?');">Reset</button>
                             </td>
                             <td colspan="2">
-                                <button type="submit" id="load_list_btn" onclick="return confirm('Are you sure you want to load the list?');">Load List</button>
+                                <button type="button" id="load_list_btn">Load List</button>
                             </td>
                     </tbody>
                 </table>
@@ -100,10 +100,13 @@
                         <!-- data loaded here -->
                     </tbody>
                 </table>
+                
             </div>
+            <input type="text" name="equipment-list-stats" id="equipment-list-stats" disabled>
         </div>
     </main>
     <script src="dcclarity-global-var.js"></script>
+    <script src="dcfm-equipment.js"></script>
 </body>
 
 </html>
