@@ -23,11 +23,14 @@
                             <td style="width: 100px;">Done</td>
                         </tr>
                         <tr>
-                            <td>Auto load equipment's detail & history data from dcfm-equipment-db.json  & dcfm-equipment-history-db.json based on Equipment ID got from dcfm-equipment-list.html "View" button.</td>
+                            <td>Auto load equipment's detail & history data from dcfm-equipment-db.json &
+                                dcfm-equipment-history-db.json based on Equipment ID got from dcfm-equipment-list.html
+                                "View" button.</td>
                             <td>Not started</td>
                         </tr>
                         <tr>
-                            <td>Add "Actions" column header on the last column of the loaded equipment-history table and auto-generate "Delete" button on every data row created.</td>
+                            <td>Add "Actions" column header on the last column of the loaded equipment-history table and
+                                auto-generate "Delete" button on every data row created.</td>
                             <td>Not started</td>
                         </tr>
                         <tr>
@@ -43,11 +46,13 @@
                             <td>Not started</td>
                         </tr>
                         <tr>
-                            <td>Detail section "Cancel" button function (reset changes and disable back enabled item).</td>
+                            <td>Detail section "Cancel" button function (reset changes and disable back enabled item).
+                            </td>
                             <td>Not started</td>
                         </tr>
                         <tr>
-                            <td>Detail section "Update Details" button function (do compare logic, if no changes, alert user and do nothing).</td>
+                            <td>Detail section "Update Details" button function (do compare logic, if no changes, alert
+                                user and do nothing).</td>
                             <td>Not started</td>
                         </tr>
                         <tr>
@@ -55,11 +60,14 @@
                             <td>Not started</td>
                         </tr>
                         <tr>
-                            <td>Add logic to auto add history for any successful "Update Details" with value change recorded in the equipment-history table as "Details Update" event.</td>
+                            <td>Add logic to auto add history for any successful "Update Details" with value change
+                                recorded in the equipment-history table as "Details Update" event.</td>
                             <td>Not started</td>
                         </tr>
                         <tr>
-                            <td>Add logic to auto update dcfm_equipment_last_maintenance_date if the equipment_history_event value "Preventive Maintenance" is submitted only if the date is the latest.</td>
+                            <td>Add logic to auto update dcfm_equipment_last_maintenance_date if the
+                                equipment_history_event value "Preventive Maintenance" is submitted only if the date is
+                                the latest.</td>
                             <td>Not started</td>
                         </tr>
                         <tr>
@@ -79,132 +87,140 @@
             <h1>DCFM Equipment Detailed Information</h1>
             <p>Data Center Facility Management detailed equipment informations & preventive maintenance history listing.
             </p>
+            <form action="backend-equipment-details/submit.php" method="post">
+                <table id="equipment-details">
+                    <thead>
+                        <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
+                        <tr hidden>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <label for="dcfm_equipment_id">Equipment ID</label>
+                                <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" disabled>
+                            </td>
+                            <td colspan="2">
+                                <label for="dcfm_equipment_type">Equipment Type</label>
+                                <select name="dcfm_equipment_type" id="dcfm_equipment_type" disabled>
+                                    <option value="">Select Equipment Type</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                <label for="dcfm_equipment_brand">Equipment Brand</label>
+                                <input type="text" name="dcfm_equipment_brand" id="dcfm_equipment_brand" disabled>
+                            </td>
+                            <td colspan="2">
+                                <label for="dcfm_equipment_spec">Equipment Specification or Capacity</label>
+                                <input type="text" name="dcfm_equipment_spec" id="dcfm_equipment_spec" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="dcfm_equipment_status">Equipment Status</label>
+                                <select name="dcfm_equipment_status" id="dcfm_equipment_status" disabled>
+                                    <option value="">Select Status</option>
+                                    <option value="Operational">Operational</option>
+                                    <option value="Under Maintenance">Under Maintenance</option>
+                                    <option value="Faulty">Faulty</option>
+                                    <option value="Decommissioned">Decommissioned</option>
+                                    <option value="Spare">Spare</option>
+                                    <option value="Disposed">Disposed</option>
+                                </select>
+                            </td>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_detailed_loc">Equipment Detailed Location</label>
+                                <input type="text" name="dcfm_equipment_detailed_loc" id="dcfm_equipment_detailed_loc"
+                                    disabled>
+                            </td>
+                            <td colspan="2">
+                                <label for="dc_location">DC Location</label>
+                                <select name="dc_location" id="dc_location" disabled>
+                                    <option value="">Select Location</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_supplier">Main Supplier Name</label>
+                                <input type="text" name="dcfm_equipment_supplier" id="dcfm_equipment_supplier" disabled>
+                            </td>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_current_vendor">Current Vendor IFM</label>
+                                <input type="text" name="dcfm_equipment_current_vendor"
+                                    id="dcfm_equipment_current_vendor" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <label for="dcfm_equipment_serial_number">Asset Serial Number</label>
+                                <input type="text" name="dcfm_equipment_serial_number" id="dcfm_equipment_serial_number"
+                                    disabled>
+                            </td>
+                            <td colspan="3">
+                                <label for="dcfm_equipment_tm_asset_number">TM Asset Number</label>
+                                <input type="text" name="dcfm_equipment_tm_asset_number"
+                                    id="dcfm_equipment_tm_asset_number" disabled>
+                            </td>
+                            <td colspan="2">
+                                <label for="dcfm_equipment_designed_lifespan">Designed Lifespan (Years Max)</label>
+                                <input type="number" name="dcfm_equipment_designed_lifespan"
+                                    id="dcfm_equipment_designed_lifespan" min="0" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_install_date">Date Installed</label>
+                                <input type="date" name="dcfm_equipment_install_date" id="dcfm_equipment_install_date"
+                                    disabled>
+                            </td>
+                            <td colspan="4">
+                                <label for="dcfm_equipment_last_maintenance_date">Last Maintenance Date</label>
+                                <input type="date" name="dcfm_equipment_last_maintenance_date"
+                                    id="dcfm_equipment_last_maintenance_date" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <label for="dcfm_equipment_note">Additional Notes</label>
+                                <textarea name="dcfm_equipment_note" id="dcfm_equipment_note" rows="4"
+                                    disabled></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <button type="button"
+                                    onclick="if(confirm('Are you sure you want to proceed?')) { alert('Action confirmed!'); }">Edit</button>
+                            </td>
+                            <td colspan="2">
+                                <button type="button"
+                                    onclick="if(confirm('Are you sure you want to delete this detail?')) { alert('Action confirmed!'); }"
+                                    disabled>Delete Details</button>
+                            </td>
+                            <td colspan="2"></td>
+                            <td colspan="1">
+                                <button type="button"
+                                    onclick="if(confirm('Are you sure you want to cancel edit?')) { alert('Action confirmed!'); }"
+                                    disabled>Cancel</button>
+                            </td>
+                            <td colspan="2">
+                                <button type="submit"
+                                    onclick="return confirm('Are you sure you want to update details?');"
+                                    disabled>Update Details</button>
+                            </td>
+                        </tr>
 
-            <table id="equipment-details">
-                <thead>
-                    <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
-                    <tr hidden>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2">
-                            <label for="dcfm_equipment_id">Equipment ID</label>
-                            <input type="text" name="dcfm_equipment_id" id="dcfm_equipment_id" disabled>
-                        </td>
-                        <td colspan="2">
-                            <label for="dcfm_equipment_type">Equipment Type</label>
-                            <select name="dcfm_equipment_type" id="dcfm_equipment_type" disabled>
-                                <option value="">Select Equipment Type</option>
-                            </select>
-                        </td>
-                        <td colspan="2">
-                            <label for="dcfm_equipment_brand">Equipment Brand</label>
-                            <input type="text" name="dcfm_equipment_brand" id="dcfm_equipment_brand" disabled>
-                        </td>
-                        <td colspan="2">
-                            <label for="dcfm_equipment_spec">Equipment Specification or Capacity</label>
-                            <input type="text" name="dcfm_equipment_spec" id="dcfm_equipment_spec" disabled>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <label for="dcfm_equipment_status">Equipment Status</label>
-                            <select name="dcfm_equipment_status" id="dcfm_equipment_status" disabled>
-                                <option value="">Select Status</option>
-                                <option value="Operational">Operational</option>
-                                <option value="Under Maintenance">Under Maintenance</option>
-                                <option value="Faulty">Faulty</option>
-                                <option value="Decommissioned">Decommissioned</option>
-                                <option value="Spare">Spare</option>
-                                <option value="Disposed">Disposed</option>
-                            </select>
-                        </td>
-                        <td colspan="4">
-                            <label for="dcfm_equipment_detailed_loc">Equipment Detailed Location</label>
-                            <input type="text" name="dcfm_equipment_detailed_loc" id="dcfm_equipment_detailed_loc"
-                                disabled>
-                        </td>
-                        <td colspan="2">
-                            <label for="dc_location">DC Location</label>
-                            <select name="dc_location" id="dc_location" disabled>
-                                <option value="">Select Location</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <label for="dcfm_equipment_supplier">Main Supplier Name</label>
-                            <input type="text" name="dcfm_equipment_supplier" id="dcfm_equipment_supplier" disabled>
-                        </td>
-                        <td colspan="4">
-                            <label for="dcfm_equipment_current_vendor">Current Vendor IFM</label>
-                            <input type="text" name="dcfm_equipment_current_vendor" id="dcfm_equipment_current_vendor"
-                                disabled>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <label for="dcfm_equipment_serial_number">Asset Serial Number</label>
-                            <input type="text" name="dcfm_equipment_serial_number" id="dcfm_equipment_serial_number"
-                                disabled>
-                        </td>
-                        <td colspan="3">
-                            <label for="dcfm_equipment_tm_asset_number">TM Asset Number</label>
-                            <input type="text" name="dcfm_equipment_tm_asset_number" id="dcfm_equipment_tm_asset_number"
-                                disabled>
-                        </td>
-                        <td colspan="2">
-                            <label for="dcfm_equipment_designed_lifespan">Designed Lifespan (Years Max)</label>
-                            <input type="number" name="dcfm_equipment_designed_lifespan"
-                                id="dcfm_equipment_designed_lifespan" min="0" disabled>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <label for="dcfm_equipment_install_date">Date Installed</label>
-                            <input type="date" name="dcfm_equipment_install_date" id="dcfm_equipment_install_date"
-                                disabled>
-                        </td>
-                        <td colspan="4">
-                            <label for="dcfm_equipment_last_maintenance_date">Last Maintenance Date</label>
-                            <input type="date" name="dcfm_equipment_last_maintenance_date"
-                                id="dcfm_equipment_last_maintenance_date" disabled>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="8">
-                            <label for="dcfm_equipment_note">Additional Notes</label>
-                            <textarea name="dcfm_equipment_note" id="dcfm_equipment_note" rows="4" disabled></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1">
-                            <button type="button" onclick="if(confirm('Are you sure you want to proceed?')) { alert('Action confirmed!'); }">Edit</button>
-                        </td>
-                        <td colspan="2">
-                            <button type="button" onclick="if(confirm('Are you sure you want to delete this detail?')) { alert('Action confirmed!'); }" disabled>Delete Details</button>
-                        </td>
-                        <td colspan="2"></td>
-                        <td colspan="1">
-                            <button type="button" onclick="if(confirm('Are you sure you want to cancel edit?')) { alert('Action confirmed!'); }" disabled>Cancel</button>
-                        </td>
-                        <td colspan="2">
-                            <button type="submit" onclick="return confirm('Are you sure you want to update details?');" disabled>Update Details</button>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
+                    </tbody>
+                </table>
+            </form>
             <hr style="width: 75%;">
 
             <h2>Equipment History</h2>
@@ -221,58 +237,61 @@
                 </table>
             </div>
             <form action="backend-equipment-history/submit.php" method="post">
-            <table id="equipment-history-form">
-                <thead>
-                    <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
-                    <tr hidden>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2">
-                            <label for="equipment_history_date">Date</label>
-                            <input type="date" name="equipment_history_date" id="equipment_history_date" required>
-                        </td>
-                        <td colspan="2">
-                            <label for="equipment_history_event">Event</label>
-                            <select name="equipment_history_event" id="equipment_history_event" required>
-                            <option value="">Select event</option>
-                            <option value="Preventive Maintenance">Preventive Maintenance</option>
-                            <option value="Disposed">Disposed</option>
-                            <option value="Breakdown">Breakdown</option>
-                            <option value="Relocate">Relocate</option>
-                            <option value="Part Order">Part Order</option>
-                            <option value="Other">Other</option>
-                            </select>
-                        </td>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="8">
-                            <label for="equipment_history_desc">Description</label>
-                            <textarea name="equipment_history_desc" id="equipment_history_desc" rows="4" required></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1">
-                            <button type="reset" onclick="return confirm('Are you sure you want to reset the history form?');">Reset</button>
-                        </td>
-                        <td colspan="5"></td>
-                        <td colspan="2">
-                            <button type="submit" onclick="return confirm('Are you sure you want to add event?');">Add Event</button>
-                        </td>
-                    </tr>
+                <table id="equipment-history-form">
+                    <thead>
+                        <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
+                        <tr hidden>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <label for="equipment_history_date">Date</label>
+                                <input type="date" name="equipment_history_date" id="equipment_history_date" required>
+                            </td>
+                            <td colspan="2">
+                                <label for="equipment_history_event">Event</label>
+                                <select name="equipment_history_event" id="equipment_history_event" required>
+                                    <option value="">Select event</option>
+                                    <option value="Preventive Maintenance">Preventive Maintenance</option>
+                                    <option value="Disposed">Disposed</option>
+                                    <option value="Breakdown">Breakdown</option>
+                                    <option value="Relocate">Relocate</option>
+                                    <option value="Part Order">Part Order</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </td>
+                            <td colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <label for="equipment_history_desc">Description</label>
+                                <textarea name="equipment_history_desc" id="equipment_history_desc" rows="4"
+                                    required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <button type="reset"
+                                    onclick="return confirm('Are you sure you want to reset the history form?');">Reset</button>
+                            </td>
+                            <td colspan="5"></td>
+                            <td colspan="2">
+                                <button type="submit"
+                                    onclick="return confirm('Are you sure you want to add event?');">Add Event</button>
+                            </td>
+                        </tr>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
             </form>
 
         </div>
