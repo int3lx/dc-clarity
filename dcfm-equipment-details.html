@@ -87,7 +87,7 @@
             <h1>DCFM Equipment Detailed Information</h1>
             <p>Data Center Facility Management detailed equipment informations & preventive maintenance history listing.
             </p>
-            <form action="backend-equipment-details/submit.php" method="post">
+            <form action="backend-equipment-update/submit.php" method="post">
                 <table id="equipment-details">
                     <thead>
                         <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
@@ -208,22 +208,22 @@
                         </tr>
                         <tr>
                             <td colspan="1">
-                                <button type="button"
+                                <button type="button" id="edit_details"
                                     onclick="if(confirm('Are you sure you want to proceed?')) { alert('Action confirmed!'); }">Edit</button>
                             </td>
                             <td colspan="2">
-                                <button type="button"
+                                <button type="button" id="delete_details"
                                     onclick="if(confirm('Are you sure you want to delete this detail?')) { alert('Action confirmed!'); }"
                                     disabled>Delete Details</button>
                             </td>
                             <td colspan="2"></td>
                             <td colspan="1">
-                                <button type="button"
+                                <button type="button" id="cancel_update"
                                     onclick="if(confirm('Are you sure you want to cancel edit?')) { alert('Action confirmed!'); }"
                                     disabled>Cancel</button>
                             </td>
                             <td colspan="2">
-                                <button type="submit"
+                                <button type="submit" id="update_details"
                                     onclick="return confirm('Are you sure you want to update details?');"
                                     disabled>Update Details</button>
                             </td>
@@ -297,7 +297,7 @@
                             </td>
                             <td colspan="5"></td>
                             <td colspan="2">
-                                <button type="submit"
+                                <button type="submit" id="add_event"
                                     onclick="return confirm('Are you sure you want to add event?');">Add Event</button>
                             </td>
                         </tr>
