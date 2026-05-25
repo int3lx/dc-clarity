@@ -1,0 +1,1002 @@
+[
+  {
+    "fmeqhis-id": "FMEQHIS-000043",
+    "fmeqhis-date": "16/05/2015",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "21:03 06/01/2025",
+    "fmeqhis-date-update": "21:03 06/01/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000014",
+    "fmeqhis-date": "24/12/2005",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "15:25 10/01/2025",
+    "fmeqhis-date-update": "15:25 10/01/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000096",
+    "fmeqhis-date": "17/11/2000",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-UPS-000043",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "21:49 15/01/2025",
+    "fmeqhis-date-update": "21:49 15/01/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000071",
+    "fmeqhis-date": "04/09/2009",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "22:42 19/01/2025",
+    "fmeqhis-date-update": "22:42 19/01/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000027",
+    "fmeqhis-date": "09/02/2005",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "09:31 23/01/2025",
+    "fmeqhis-date-update": "09:31 23/01/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000080",
+    "fmeqhis-date": "16/03/2015",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "13:37 04/02/2025",
+    "fmeqhis-date-update": "13:37 04/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000007",
+    "fmeqhis-date": "24/11/2015",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "01:44 10/02/2025",
+    "fmeqhis-date-update": "01:44 10/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000002",
+    "fmeqhis-date": "14/11/2001",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "20:04 15/02/2025",
+    "fmeqhis-date-update": "20:04 15/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000090",
+    "fmeqhis-date": "31/10/2020",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "23:40 17/02/2025",
+    "fmeqhis-date-update": "23:40 17/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000003",
+    "fmeqhis-date": "16/10/2015",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "20:44 19/02/2025",
+    "fmeqhis-date-update": "20:44 19/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000094",
+    "fmeqhis-date": "06/12/2013",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CHI-000080",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "04:14 21/02/2025",
+    "fmeqhis-date-update": "04:14 21/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000075",
+    "fmeqhis-date": "07/06/2010",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "08:16 29/02/2025",
+    "fmeqhis-date-update": "08:16 29/02/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000006",
+    "fmeqhis-date": "24/08/2012",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "22:04 07/03/2025",
+    "fmeqhis-date-update": "22:04 07/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000001",
+    "fmeqhis-date": "12/03/2018",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "05:26 15/03/2025",
+    "fmeqhis-date-update": "05:26 15/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000030",
+    "fmeqhis-date": "28/06/2020",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "18:49 15/03/2025",
+    "fmeqhis-date-update": "18:49 15/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000069",
+    "fmeqhis-date": "04/11/2009",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "01:44 16/03/2025",
+    "fmeqhis-date-update": "01:44 16/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000057",
+    "fmeqhis-date": "23/12/2007",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-GEN-000097",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "01:29 23/03/2025",
+    "fmeqhis-date-update": "01:29 23/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000008",
+    "fmeqhis-date": "14/07/2005",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000068",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "01:16 27/03/2025",
+    "fmeqhis-date-update": "01:16 27/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000018",
+    "fmeqhis-date": "05/10/2020",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "19:32 30/03/2025",
+    "fmeqhis-date-update": "19:32 30/03/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000058",
+    "fmeqhis-date": "27/08/2018",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "14:48 07/04/2025",
+    "fmeqhis-date-update": "14:48 07/04/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000028",
+    "fmeqhis-date": "23/02/2002",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "00:12 20/04/2025",
+    "fmeqhis-date-update": "00:12 20/04/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000024",
+    "fmeqhis-date": "19/05/2011",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "21:57 20/04/2025",
+    "fmeqhis-date-update": "21:57 20/04/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000098",
+    "fmeqhis-date": "18/08/2018",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "08:11 21/04/2025",
+    "fmeqhis-date-update": "08:11 21/04/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000055",
+    "fmeqhis-date": "18/10/2010",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "15:41 26/04/2025",
+    "fmeqhis-date-update": "15:41 26/04/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000013",
+    "fmeqhis-date": "22/09/2019",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "16:55 29/04/2025",
+    "fmeqhis-date-update": "16:55 29/04/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000089",
+    "fmeqhis-date": "14/04/2010",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-UPS-000043",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "01:39 01/05/2025",
+    "fmeqhis-date-update": "01:39 01/05/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000093",
+    "fmeqhis-date": "15/07/2015",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "21:30 04/05/2025",
+    "fmeqhis-date-update": "21:30 04/05/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000031",
+    "fmeqhis-date": "12/12/2012",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "06:30 11/05/2025",
+    "fmeqhis-date-update": "06:30 11/05/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000076",
+    "fmeqhis-date": "20/05/2001",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "19:26 17/05/2025",
+    "fmeqhis-date-update": "19:26 17/05/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000070",
+    "fmeqhis-date": "13/11/2013",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "03:23 21/05/2025",
+    "fmeqhis-date-update": "03:23 21/05/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000068",
+    "fmeqhis-date": "28/12/2019",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "04:26 30/05/2025",
+    "fmeqhis-date-update": "04:26 30/05/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000039",
+    "fmeqhis-date": "28/11/2017",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "18:38 01/06/2025",
+    "fmeqhis-date-update": "18:38 01/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000022",
+    "fmeqhis-date": "22/08/2008",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CHI-000068",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "10:21 03/06/2025",
+    "fmeqhis-date-update": "10:21 03/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000023",
+    "fmeqhis-date": "14/04/2020",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "18:33 07/06/2025",
+    "fmeqhis-date-update": "18:33 07/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000078",
+    "fmeqhis-date": "01/03/2007",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "07:51 11/06/2025",
+    "fmeqhis-date-update": "07:51 11/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000042",
+    "fmeqhis-date": "15/03/2017",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "12:08 20/06/2025",
+    "fmeqhis-date-update": "12:08 20/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000053",
+    "fmeqhis-date": "05/05/2012",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "12:25 23/06/2025",
+    "fmeqhis-date-update": "12:25 23/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000045",
+    "fmeqhis-date": "11/07/2008",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-GEN-000097",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "13:11 23/06/2025",
+    "fmeqhis-date-update": "13:11 23/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000020",
+    "fmeqhis-date": "28/02/2016",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "21:23 26/06/2025",
+    "fmeqhis-date-update": "21:23 26/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000073",
+    "fmeqhis-date": "11/09/2018",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-UPS-000043",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "14:16 29/06/2025",
+    "fmeqhis-date-update": "14:16 29/06/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000004",
+    "fmeqhis-date": "22/08/2000",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "01:59 03/07/2025",
+    "fmeqhis-date-update": "01:59 03/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000083",
+    "fmeqhis-date": "10/07/2001",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "17:20 03/07/2025",
+    "fmeqhis-date-update": "17:20 03/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000026",
+    "fmeqhis-date": "25/12/2018",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "02:48 07/07/2025",
+    "fmeqhis-date-update": "02:48 07/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000029",
+    "fmeqhis-date": "07/05/2001",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000068",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "23:05 09/07/2025",
+    "fmeqhis-date-update": "23:05 09/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000087",
+    "fmeqhis-date": "07/05/2017",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "20:18 17/07/2025",
+    "fmeqhis-date-update": "20:18 17/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000005",
+    "fmeqhis-date": "10/05/2013",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "15:00 24/07/2025",
+    "fmeqhis-date-update": "15:00 24/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000016",
+    "fmeqhis-date": "16/10/2012",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000068",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "03:54 27/07/2025",
+    "fmeqhis-date-update": "03:54 27/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000047",
+    "fmeqhis-date": "20/07/2016",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "20:35 27/07/2025",
+    "fmeqhis-date-update": "20:35 27/07/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000056",
+    "fmeqhis-date": "30/06/2015",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "20:26 01/08/2025",
+    "fmeqhis-date-update": "20:26 01/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000067",
+    "fmeqhis-date": "19/04/2002",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "05:21 02/08/2025",
+    "fmeqhis-date-update": "05:21 02/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000049",
+    "fmeqhis-date": "17/08/2013",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "20:06 02/08/2025",
+    "fmeqhis-date-update": "20:06 02/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000095",
+    "fmeqhis-date": "29/12/2007",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "09:46 03/08/2025",
+    "fmeqhis-date-update": "09:46 03/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000086",
+    "fmeqhis-date": "12/06/2013",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "18:34 06/08/2025",
+    "fmeqhis-date-update": "18:34 06/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000074",
+    "fmeqhis-date": "02/12/2014",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "15:11 09/08/2025",
+    "fmeqhis-date-update": "15:11 09/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000046",
+    "fmeqhis-date": "11/07/2019",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "17:42 12/08/2025",
+    "fmeqhis-date-update": "17:42 12/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000050",
+    "fmeqhis-date": "04/10/2007",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "12:38 15/08/2025",
+    "fmeqhis-date-update": "12:38 15/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000036",
+    "fmeqhis-date": "17/11/2003",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000043",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "10:07 18/08/2025",
+    "fmeqhis-date-update": "10:07 18/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000044",
+    "fmeqhis-date": "03/05/2014",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-CHI-000068",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "15:40 22/08/2025",
+    "fmeqhis-date-update": "15:40 22/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000048",
+    "fmeqhis-date": "29/10/2005",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "12:57 26/08/2025",
+    "fmeqhis-date-update": "12:57 26/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000088",
+    "fmeqhis-date": "01/06/2014",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "23:30 26/08/2025",
+    "fmeqhis-date-update": "23:30 26/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000085",
+    "fmeqhis-date": "11/10/2002",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "17:46 30/08/2025",
+    "fmeqhis-date-update": "17:46 30/08/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000009",
+    "fmeqhis-date": "05/12/2019",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CHI-000080",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "10:53 01/09/2025",
+    "fmeqhis-date-update": "10:53 01/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000065",
+    "fmeqhis-date": "21/08/2013",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "12:59 01/09/2025",
+    "fmeqhis-date-update": "12:59 01/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000033",
+    "fmeqhis-date": "04/05/2020",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "23:33 01/09/2025",
+    "fmeqhis-date-update": "23:33 01/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000040",
+    "fmeqhis-date": "10/01/2005",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "14:22 03/09/2025",
+    "fmeqhis-date-update": "14:22 03/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000059",
+    "fmeqhis-date": "19/07/2016",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000069",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "00:17 05/09/2025",
+    "fmeqhis-date-update": "00:17 05/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000084",
+    "fmeqhis-date": "20/10/2014",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "02:04 06/09/2025",
+    "fmeqhis-date-update": "02:04 06/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000092",
+    "fmeqhis-date": "13/04/2014",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "10:43 13/09/2025",
+    "fmeqhis-date-update": "10:43 13/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000041",
+    "fmeqhis-date": "28/11/2015",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "08:11 18/09/2025",
+    "fmeqhis-date-update": "08:11 18/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000099",
+    "fmeqhis-date": "07/01/2005",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "19:01 20/09/2025",
+    "fmeqhis-date-update": "19:01 20/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000077",
+    "fmeqhis-date": "11/11/2017",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-GEN-000097",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "09:40 21/09/2025",
+    "fmeqhis-date-update": "09:40 21/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000091",
+    "fmeqhis-date": "18/11/2007",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "12:23 21/09/2025",
+    "fmeqhis-date-update": "12:23 21/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000038",
+    "fmeqhis-date": "07/06/2001",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "15:17 21/09/2025",
+    "fmeqhis-date-update": "15:17 21/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000097",
+    "fmeqhis-date": "25/01/2019",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "13:57 22/09/2025",
+    "fmeqhis-date-update": "13:57 22/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000082",
+    "fmeqhis-date": "14/06/2006",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "20:03 22/09/2025",
+    "fmeqhis-date-update": "20:03 22/09/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000100",
+    "fmeqhis-date": "07/06/2012",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "22:14 06/10/2025",
+    "fmeqhis-date-update": "22:14 06/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000051",
+    "fmeqhis-date": "13/07/2005",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-GEN-000097",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "12:08 09/10/2025",
+    "fmeqhis-date-update": "12:08 09/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000066",
+    "fmeqhis-date": "25/09/2006",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-UPS-000042",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "02:30 11/10/2025",
+    "fmeqhis-date-update": "02:30 11/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000064",
+    "fmeqhis-date": "18/03/2016",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "17:00 13/10/2025",
+    "fmeqhis-date-update": "17:00 13/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000063",
+    "fmeqhis-date": "03/01/2011",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "18:35 16/10/2025",
+    "fmeqhis-date-update": "18:35 16/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000019",
+    "fmeqhis-date": "12/12/2003",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Relocate from KKEDC",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "14:06 18/10/2025",
+    "fmeqhis-date-update": "14:06 18/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000081",
+    "fmeqhis-date": "11/10/2020",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "16:34 18/10/2025",
+    "fmeqhis-date-update": "16:34 18/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000035",
+    "fmeqhis-date": "22/10/2010",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Prone to faulty due to low quality parts.",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "22:33 20/10/2025",
+    "fmeqhis-date-update": "22:33 20/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000011",
+    "fmeqhis-date": "06/09/2000",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "15:28 27/10/2025",
+    "fmeqhis-date-update": "15:28 27/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000054",
+    "fmeqhis-date": "20/02/2008",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000080",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "01:33 30/10/2025",
+    "fmeqhis-date-update": "01:33 30/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000034",
+    "fmeqhis-date": "18/07/2004",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "14:08 30/10/2025",
+    "fmeqhis-date-update": "14:08 30/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000015",
+    "fmeqhis-date": "16/08/2003",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "07:55 31/10/2025",
+    "fmeqhis-date-update": "07:55 31/10/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000012",
+    "fmeqhis-date": "11/10/2012",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "05:59 09/11/2025",
+    "fmeqhis-date-update": "05:59 09/11/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000079",
+    "fmeqhis-date": "22/04/2016",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-CRA-000027",
+    "fmeqhis-created-by": "Staff H",
+    "fmeqhis-date-created": "10:50 09/11/2025",
+    "fmeqhis-date-update": "10:50 09/11/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000021",
+    "fmeqhis-date": "04/02/2009",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "05:30 18/11/2025",
+    "fmeqhis-date-update": "05:30 18/11/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000037",
+    "fmeqhis-date": "23/06/2012",
+    "fmeqhis-event": "Part Order",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "05:30 23/11/2025",
+    "fmeqhis-date-update": "05:30 23/11/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000061",
+    "fmeqhis-date": "07/04/2012",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-UPS-000052",
+    "fmeqhis-created-by": "Staff A",
+    "fmeqhis-date-created": "17:52 28/11/2025",
+    "fmeqhis-date-update": "17:52 28/11/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000072",
+    "fmeqhis-date": "08/01/2002",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Relocate from SNEDC",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff E",
+    "fmeqhis-date-created": "02:10 30/11/2025",
+    "fmeqhis-date-update": "02:10 30/11/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000032",
+    "fmeqhis-date": "05/03/2006",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-CHI-000058",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "17:06 01/12/2025",
+    "fmeqhis-date-update": "17:06 01/12/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000062",
+    "fmeqhis-date": "03/08/2003",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-UPS-000043",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "01:00 06/12/2025",
+    "fmeqhis-date-update": "01:00 06/12/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000060",
+    "fmeqhis-date": "18/10/2011",
+    "fmeqhis-event": "Breakdown",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-CHI-000080",
+    "fmeqhis-created-by": "Staff D",
+    "fmeqhis-date-created": "05:15 06/12/2025",
+    "fmeqhis-date-update": "05:15 06/12/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000010",
+    "fmeqhis-date": "14/07/2017",
+    "fmeqhis-event": "Disposed",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-CRA-000098",
+    "fmeqhis-created-by": "Staff C",
+    "fmeqhis-date-created": "12:30 08/12/2025",
+    "fmeqhis-date-update": "12:30 08/12/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000017",
+    "fmeqhis-date": "06/01/2017",
+    "fmeqhis-event": "Other",
+    "fmeqhis-notes": "Pending to repurpose for KKEDC",
+    "fmeq-id": "BFD-CHI-000033",
+    "fmeqhis-created-by": "Staff G",
+    "fmeqhis-date-created": "12:40 16/12/2025",
+    "fmeqhis-date-update": "12:40 16/12/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000052",
+    "fmeqhis-date": "27/07/2015",
+    "fmeqhis-event": "Preventive Maintenance",
+    "fmeqhis-notes": "Obselete. No more support.",
+    "fmeq-id": "BFD-UPS-000023",
+    "fmeqhis-created-by": "Staff F",
+    "fmeqhis-date-created": "19:53 30/12/2025",
+    "fmeqhis-date-update": "19:53 30/12/2026"
+  },
+  {
+    "fmeqhis-id": "FMEQHIS-000025",
+    "fmeqhis-date": "21/10/2016",
+    "fmeqhis-event": "Relocate",
+    "fmeqhis-notes": "New equipment",
+    "fmeq-id": "BFD-GEN-000099",
+    "fmeqhis-created-by": "Staff B",
+    "fmeqhis-date-created": "21:48 30/12/2025",
+    "fmeqhis-date-update": "21:48 30/12/2026"
+  }
+]
