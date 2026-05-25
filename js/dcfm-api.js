@@ -140,12 +140,13 @@ const dclarityAPI = (function() {
      * @param {string} notes - Event notes
      * @returns {Promise<object>} Created history entry
      */
-    async function addHistory(equipmentId, event, notes = '') {
+    async function addHistory(equipmentId, event, notes = '', historyDate = '') {
         const endpoint = config.API_ENDPOINTS?.history?.create || 'backend/history/create.php';
         const data = {
             equipment_id: equipmentId,
             event: event,
             notes: notes,
+            history_date: historyDate,
             created_by: config.CURRENT_USER
         };
         return request(endpoint, 'POST', data);

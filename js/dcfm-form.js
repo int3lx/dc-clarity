@@ -91,6 +91,7 @@ const dclarityForm = (function() {
 
             // Success
             const equipmentId = result.data?.id || 'Equipment';
+            ui.setFieldValue('dcfm_equipment_id', equipmentId);
             ui.showSuccess(
                 `${equipmentId} successfully added to the record`,
                 () => {
@@ -127,15 +128,15 @@ const dclarityForm = (function() {
             brand: ui.getFieldValue('dcfm_equipment_brand'),
             spec: ui.getFieldValue('dcfm_equipment_spec'),
             status: ui.getFieldValue('dcfm_equipment_status') || 'Active',
-            location: ui.getFieldValue('dcfm_equipment_location') || '',
+            location: ui.getFieldValue('dcfm_equipment_detailed_loc') || '',
             supplier: ui.getFieldValue('dcfm_equipment_supplier') || '',
-            vendor: ui.getFieldValue('dcfm_equipment_vendor') || '',
-            sn: ui.getFieldValue('dcfm_equipment_serial'),
-            'asset-tag': ui.getFieldValue('dcfm_equipment_asset_tag') || '',
-            lifespan: parseInt(ui.getFieldValue('dcfm_equipment_lifespan')) || 0,
-            installed: ui.getFieldValue('dcfm_equipment_installed') || '',
-            'latest-pm': ui.getFieldValue('dcfm_equipment_latest_pm') || '',
-            notes: ui.getFieldValue('dcfm_equipment_notes') || '',
+            vendor: ui.getFieldValue('dcfm_equipment_current_vendor') || '',
+            sn: ui.getFieldValue('dcfm_equipment_serial_number'),
+            'asset-tag': ui.getFieldValue('dcfm_equipment_tm_asset_number') || '',
+            lifespan: parseInt(ui.getFieldValue('dcfm_equipment_designed_lifespan')) || 0,
+            installed: ui.getFieldValue('dcfm_equipment_install_date') || '',
+            'latest-pm': ui.getFieldValue('dcfm_equipment_last_maintenance_date') || '',
+            notes: ui.getFieldValue('dcfm_equipment_note') || '',
             'created-by': config.CURRENT_USER
         };
     }
@@ -173,15 +174,16 @@ const dclarityForm = (function() {
             'dcfm_equipment_brand',
             'dcfm_equipment_spec',
             'dcfm_equipment_status',
-            'dcfm_equipment_location',
+            'dcfm_equipment_detailed_loc',
             'dcfm_equipment_supplier',
-            'dcfm_equipment_vendor',
-            'dcfm_equipment_serial',
-            'dcfm_equipment_asset_tag',
-            'dcfm_equipment_lifespan',
-            'dcfm_equipment_installed',
-            'dcfm_equipment_latest_pm',
-            'dcfm_equipment_notes'
+            'dcfm_equipment_current_vendor',
+            'dcfm_equipment_serial_number',
+            'dcfm_equipment_tm_asset_number',
+            'dcfm_equipment_designed_lifespan',
+            'dcfm_equipment_install_date',
+            'dcfm_equipment_last_maintenance_date',
+            'dcfm_equipment_note',
+            'dcfm_equipment_id'
         ]);
 
         ui.hideCurrentPopup();

@@ -45,7 +45,7 @@
                         </tr>
                         <tr>
                             <td>Mock-up DB - DCFM Equipment's <a
-                                    href="backend-database/dcfm-equipment-db.json">Database</a>.</td>
+                                    href="backend/database/dcfm-equipment-db.json">Database</a>.</td>
                             <td>Ready</td>
                         </tr>
                         <tr>
@@ -60,7 +60,7 @@
             <!-- The form for adding new and unrecorded equipments in the Data Center Facility Management system start here. -->
             <h1>DCFM Equipment Form</h1>
             <p>Data Center Facility Management form for new and unrecorded equipments.</p>
-            <form action="backend-equipment-form/submit.php" method="post">
+            <form id="equipment-form" novalidate>
                 <table>
                     <thead>
                         <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
@@ -170,7 +170,7 @@
                         </tr>
                         <tr>
                             <td colspan="1">
-                                <button type="reset" onclick="return confirm('Are you sure you want to reset this form?');">Reset</button>
+                                <button type="reset" id="reset_form" onclick="return confirm('Are you sure you want to reset this form?');">Reset</button>
                             </td>
                             <td colspan="5"></td>
                             <td colspan="1" style="text-align: center;">
@@ -184,19 +184,13 @@
                     </tbody>
                 </table>
             </form>
-            <script>
-                // Auto-generate Equipment ID from selected DC Location and Equipment Type.
-                window.dclarityGlobal = window.dclarityGlobal || {};
-                window.dclarityGlobal.autoGenerateConfig = {
-                    listenerIds: ["dc_location", "dcfm_equipment_type"],
-                    sourceIds: ["dc_location", "dcfm_equipment_type"],
-                    targetId: "dcfm_equipment_id", // The ID of the input field to populate with the generated value.
-                    format: "{dc_location}-{dcfm_equipment_type}-[DB GENERATED SEQUENCE]", // Format for the generated ID. You can customize this as needed.
-                };
-            </script>
+            <div id="form-status"></div>
         </div>
     </main>
-    <script src="dcclarity-global-var.js"></script>
+    <script src="js/dcclarity-global-var.js"></script>
+    <script src="js/dcfm-ui.js"></script>
+    <script src="js/dcfm-api.js"></script>
+    <script src="js/dcfm-form.js"></script>
 </body>
 
 </html>

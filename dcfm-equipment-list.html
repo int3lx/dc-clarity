@@ -38,7 +38,7 @@
                         </tr>
                         <tr>
                             <td>Mock-up DB - DCFM Equipment's <a
-                                    href="backend-database/dcfm-equipment-db.json">Database</a>.</td>
+                                    href="backend/database/dcfm-equipment-db.json">Database</a>.</td>
                             <td>Ready</td>
                         </tr>
                         <tr>
@@ -52,7 +52,7 @@
             </div>
             <h1>DCFM Equipment Listing</h1>
             <p>Data Center Facility Management recorded equipment listing.</p>
-            <form action="backend-equipment-list/submit.php" method="post">
+            <form id="equipment-list-form" novalidate>
                 <table>
                     <thead>
                         <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
@@ -105,8 +105,10 @@
             <input type="text" style="text-align: right;" name="equipment-list-stats" id="equipment-list-stats" disabled>
         </div>
     </main>
-    <script src="dcclarity-global-var.js"></script>
-    <script src="dcfm-equipment.js"></script>
+    <script src="js/dcclarity-global-var.js"></script>
+    <script src="js/dcfm-ui.js"></script>
+    <script src="js/dcfm-api.js"></script>
+    <script src="js/dcfm-list.js"></script>
 </body>
 
 </html>

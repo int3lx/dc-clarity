@@ -48,13 +48,14 @@ const dclarityDetails = (function() {
      */
     async function loadEquipment(equipmentId) {
         try {
-            ui.showLoading('equipment-details');
+            ui.showLoading('equipment-details-container');
 
             const result = await api.getEquipment(equipmentId);
             currentEquipment = result.data;
 
             displayEquipmentData(currentEquipment);
-            ui.hideLoading('equipment-details');
+            dclarityHistory.init(equipmentId);
+            ui.hideLoading('equipment-details-container');
 
         } catch (error) {
             console.error('Error loading equipment:', error);
@@ -68,10 +69,30 @@ const dclarityDetails = (function() {
     function displayEquipmentData(equipment) {
         if (!equipment) return;
 
-        // Display all fields
-        Object.keys(equipment).forEach(key => {
-            const fieldId = 'detail_' + key;
-            ui.setFieldValue(fieldId, equipment[key]);
+        // Map equipment fields to existing HTML element IDs
+        const mapping = {
+            id: 'dcfm_equipment_id',
+            type: 'dcfm_equipment_type',
+            brand: 'dcfm_equipment_brand',
+            spec: 'dcfm_equipment_spec',
+            status: 'dcfm_equipment_status',
+            location: 'dcfm_equipment_detailed_loc',
+            dc: 'dc_location',
+            supplier: 'dcfm_equipment_supplier',
+            vendor: 'dcfm_equipment_current_vendor',
+            sn: 'dcfm_equipment_serial_number',
+            'asset-tag': 'dcfm_equipment_tm_asset_number',
+            lifespan: 'dcfm_equipment_designed_lifespan',
+            installed: 'dcfm_equipment_install_date',
+            'latest-pm': 'dcfm_equipment_last_maintenance_date',
+            notes: 'dcfm_equipment_note',
+            'created-by': 'dcfm_equipment_create_by',
+            'date-created': 'dcfm_equipment_created_date'
+        };
+
+        Object.keys(mapping).forEach(key => {
+            const fid = mapping[key];
+            ui.setFieldValue(fid, equipment[key]);
         });
     }
 
@@ -79,20 +100,9 @@ const dclarityDetails = (function() {
      * Populate select fields
      */
     function populateSelectFields() {
-        ui.populateSelect(
-            'detail_type',
-            config.EQUIPMENT_TYPES
-        );
-
-        ui.populateSelect(
-            'detail_dc',
-            config.DC_LOCATIONS
-        );
-
-        ui.populateSelect(
-            'detail_status',
-            config.EQUIPMENT_STATUSES.map(s => ({ value: s, label: s }))
-        );
+        ui.populateSelect('dcfm_equipment_type', config.EQUIPMENT_TYPES, 'Select Equipment Type');
+        ui.populateSelect('dc_location', config.DC_LOCATIONS, 'Select Location');
+        ui.populateSelect('dcfm_equipment_status', config.EQUIPMENT_STATUSES.map(s => ({ value: s, label: s })), 'Select Status');
     }
 
     /**
@@ -103,11 +113,13 @@ const dclarityDetails = (function() {
         const updateBtn = document.getElementById('update_details');
         const cancelBtn = document.getElementById('cancel_update');
         const deleteBtn = document.getElementById('delete_details');
+        const historyForm = document.getElementById('equipment-history-form');
 
         if (editBtn) editBtn.addEventListener('click', enterEditMode);
         if (updateBtn) updateBtn.addEventListener('click', handleUpdate);
         if (cancelBtn) cancelBtn.addEventListener('click', exitEditMode);
         if (deleteBtn) deleteBtn.addEventListener('click', handleDelete);
+        if (historyForm) historyForm.addEventListener('submit', handleHistorySubmit);
     }
 
     /**
@@ -116,19 +128,47 @@ const dclarityDetails = (function() {
     function enterEditMode() {
         isEditing = true;
 
-        // Disable read-only fields
-        const readOnlyFields = ['detail_id', 'detail_dc', 'detail_type', 'detail_date-created', 'detail_created-by'];
+        // Disable read-only fields (map to DOM IDs)
+        const readOnlyFields = [
+            'dcfm_equipment_id',
+            'dc_location',
+            'dcfm_equipment_type',
+            'dcfm_equipment_created_date',
+            'dcfm_equipment_create_by'
+        ];
         ui.disableFields(readOnlyFields);
 
-        // Enable editable fields
-        const editableFields = config.EDITABLE_FIELDS.map(f => 'detail_' + f);
+        // Enable editable fields (map config keys to DOM IDs)
+        const fieldMap = {
+            brand: 'dcfm_equipment_brand',
+            spec: 'dcfm_equipment_spec',
+            status: 'dcfm_equipment_status',
+            location: 'dcfm_equipment_detailed_loc',
+            supplier: 'dcfm_equipment_supplier',
+            vendor: 'dcfm_equipment_current_vendor',
+            sn: 'dcfm_equipment_serial_number',
+            'asset-tag': 'dcfm_equipment_tm_asset_number',
+            lifespan: 'dcfm_equipment_designed_lifespan',
+            installed: 'dcfm_equipment_install_date',
+            'latest-pm': 'dcfm_equipment_last_maintenance_date',
+            notes: 'dcfm_equipment_note'
+        };
+
+        const editableFields = config.EDITABLE_FIELDS
+            .map(f => fieldMap[f])
+            .filter(Boolean);
         ui.enableFields(editableFields);
 
-        // Update button visibility
-        document.getElementById('edit_details').style.display = 'none';
-        document.getElementById('update_details').style.display = 'inline-block';
-        document.getElementById('cancel_update').style.display = 'inline-block';
-        document.getElementById('delete_details').style.display = 'none';
+        // Update button states
+        const editBtn = document.getElementById('edit_details');
+        const updateBtn = document.getElementById('update_details');
+        const cancelBtn = document.getElementById('cancel_update');
+        const deleteBtn = document.getElementById('delete_details');
+
+        if (editBtn) editBtn.disabled = true;
+        if (updateBtn) updateBtn.disabled = false;
+        if (cancelBtn) cancelBtn.disabled = false;
+        if (deleteBtn) deleteBtn.disabled = true;
     }
 
     /**
@@ -162,7 +202,7 @@ const dclarityDetails = (function() {
                 'Are you sure you want to update this equipment?',
                 async () => {
                     try {
-                        ui.showLoading('equipment-details');
+                        ui.showLoading('equipment-details-container');
 
                         updates.id = currentEquipment.id;
                         updates['updated-by'] = config.CURRENT_USER;
@@ -180,7 +220,7 @@ const dclarityDetails = (function() {
                         console.error('Update error:', error);
                         ui.showError('Failed to update equipment: ' + error.message);
                     } finally {
-                        ui.hideLoading('equipment-details');
+                        ui.hideLoading('equipment-details-container');
                         isProcessing = false;
                     }
                 }
@@ -199,8 +239,24 @@ const dclarityDetails = (function() {
     function gatherUpdates() {
         const updates = {};
 
+        const fieldMap = {
+            brand: 'dcfm_equipment_brand',
+            spec: 'dcfm_equipment_spec',
+            status: 'dcfm_equipment_status',
+            location: 'dcfm_equipment_detailed_loc',
+            supplier: 'dcfm_equipment_supplier',
+            vendor: 'dcfm_equipment_current_vendor',
+            sn: 'dcfm_equipment_serial_number',
+            'asset-tag': 'dcfm_equipment_tm_asset_number',
+            lifespan: 'dcfm_equipment_designed_lifespan',
+            installed: 'dcfm_equipment_install_date',
+            'latest-pm': 'dcfm_equipment_last_maintenance_date',
+            notes: 'dcfm_equipment_note'
+        };
+
         config.EDITABLE_FIELDS.forEach(field => {
-            const fieldId = 'detail_' + field;
+            const fieldId = fieldMap[field];
+            if (!fieldId) return;
             const newValue = ui.getFieldValue(fieldId);
             const oldValue = currentEquipment[field];
 
@@ -240,7 +296,7 @@ const dclarityDetails = (function() {
         isProcessing = true;
 
         try {
-            ui.showLoading('equipment-details');
+            ui.showLoading('equipment-details-container');
 
             const result = await api.deleteEquipment(currentEquipment.id, deleteHistory);
 
@@ -256,8 +312,43 @@ const dclarityDetails = (function() {
             ui.showError('Failed to delete equipment: ' + error.message);
 
         } finally {
-            ui.hideLoading('equipment-details');
+            ui.hideLoading('equipment-details-container');
             isProcessing = false;
+        }
+    }
+
+    async function handleHistorySubmit(event) {
+        event.preventDefault();
+        if (!currentEquipment || !currentEquipment.id) {
+            ui.showError('Unable to add history: equipment not loaded');
+            return;
+        }
+
+        const historyEvent = ui.getFieldValue('equipment_history_event');
+        const historyNotes = ui.getFieldValue('equipment_history_desc');
+        const historyDate = ui.getFieldValue('equipment_history_date');
+
+        if (!historyEvent || !historyNotes) {
+            ui.showError('Event and description are required');
+            return;
+        }
+
+        try {
+            ui.showLoading('history-container');
+            await dclarityHistory.addEntry(currentEquipment.id, historyEvent, historyNotes, historyDate);
+
+            ui.showSuccess('History event added successfully');
+
+            if (historyEvent.toLowerCase().trim() === 'preventive maintenance') {
+                await loadEquipment(currentEquipment.id);
+            }
+
+            document.getElementById('equipment-history-form')?.reset();
+        } catch (error) {
+            console.error('History submission error:', error);
+            ui.showError('Failed to add history event: ' + error.message);
+        } finally {
+            ui.hideLoading('history-container');
         }
     }
 

@@ -145,10 +145,19 @@ const dclarityUI = (function() {
      */
     function showLoading(containerId) {
         const container = document.getElementById(containerId);
-        if (container) {
-            container.innerHTML = '<div class="loading">Loading...</div>';
-            container.classList.add('loading-state');
+        if (!container) {
+            return;
         }
+
+        if (container.querySelector('.loading-overlay')) {
+            return;
+        }
+
+        const overlay = document.createElement('div');
+        overlay.className = 'loading-overlay';
+        overlay.innerHTML = '<div class="loading">Loading...</div>';
+        container.appendChild(overlay);
+        container.classList.add('loading-state');
     }
 
     /**
@@ -157,9 +166,16 @@ const dclarityUI = (function() {
      */
     function hideLoading(containerId) {
         const container = document.getElementById(containerId);
-        if (container) {
-            container.classList.remove('loading-state');
+        if (!container) {
+            return;
         }
+
+        const overlay = container.querySelector('.loading-overlay');
+        if (overlay) {
+            overlay.remove();
+        }
+
+        container.classList.remove('loading-state');
     }
 
     /**

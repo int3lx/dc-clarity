@@ -147,9 +147,9 @@ const dclarityHistory = (function() {
     /**
      * Add history entry (used from outside this module)
      */
-    async function addEntry(equipmentId, event, notes = '') {
+    async function addEntry(equipmentId, event, notes = '', historyDate = '') {
         try {
-            await api.addHistory(equipmentId, event, notes);
+            await api.addHistory(equipmentId, event, notes, historyDate);
 
             // Reload history
             await loadHistory(equipmentId);

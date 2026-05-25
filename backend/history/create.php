@@ -28,6 +28,7 @@ try {
     $equipmentId = getPost('equipment_id', 'string');
     $event = getPost('event', 'string');
     $notes = getPost('notes', 'string', '');
+    $historyDate = getPost('history_date', 'string', '');
     $createdBy = getPost('created_by', 'string');
     
     if (empty($createdBy)) {
@@ -57,8 +58,27 @@ try {
         $event,
         $notes,
         array(),
-        $createdBy
+        $createdBy,
+        $historyDate
     );
+
+    if (strtolower(trim($event)) === 'preventive maintenance' && !empty($historyDate)) {
+        $equipment = findJsonRow(DB_EQUIPMENT_PATH, function($item) use ($equipmentId) {
+            return isset($item['id']) && $item['id'] === $equipmentId;
+        });
+
+        if ($equipment) {
+            $currentLatestPm = isset($equipment['latest-pm']) ? $equipment['latest-pm'] : '';
+            $newPmDate = DateTime::createFromFormat('Y-m-d', $historyDate);
+            $currentPmDate = !empty($currentLatestPm) ? DateTime::createFromFormat('Y-m-d', $currentLatestPm) : null;
+
+            if ($newPmDate && (!$currentPmDate || $newPmDate > $currentPmDate)) {
+                updateJsonRow(DB_EQUIPMENT_PATH, function($item) use ($equipmentId, $historyDate) {
+                    return isset($item['id']) && $item['id'] === $equipmentId;
+                }, array('latest-pm' => $historyDate));
+            }
+        }
+    }
     
     // Return success response
     successResponse(

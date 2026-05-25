@@ -10,7 +10,7 @@
 
 <body>
     <main class="page-main">
-        <div class="page-content">
+        <div class="page-content" id="equipment-details-container">
             <div class="page-dev">
                 <h1>Developer Notes</h1>
                 <p>This page is currently under development. The detailed equipment information and preventive
@@ -71,13 +71,13 @@
                             <td>Not started</td>
                         </tr>
                         <tr>
-                            <td>Mock-up DB - DCFM Equipment's <a
-                                    href="backend-database/dcfm-equipment-db.json">Database</a>.</td>
+                                <td>Mock-up DB - DCFM Equipment's <a
+                                    href="backend/database/dcfm-equipment-db.json">Database</a>.</td>
                             <td>Ready</td>
                         </tr>
                         <tr>
                             <td>Mock-up DB - DCFM Equipment's History <a
-                                    href="backend-database/dcfm-equipment-history-db.json">Database</a>.</td>
+                                    href="backend/database/dcfm-equipment-history-db.json">Database</a>.</td>
                             <td>Ready</td>
                         </tr>
                     </tbody>
@@ -87,7 +87,7 @@
             <h1>DCFM Equipment Detailed Information</h1>
             <p>Data Center Facility Management detailed equipment informations & preventive maintenance history listing.
             </p>
-            <form action="backend-equipment-update/submit.php" method="post">
+            <form id="equipment-details-form" novalidate>
                 <table id="equipment-details">
                     <thead>
                         <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
@@ -223,7 +223,7 @@
                                     disabled>Cancel</button>
                             </td>
                             <td colspan="2">
-                                <button type="submit" id="update_details"
+                                <button type="button" id="update_details"
                                     onclick="return confirm('Are you sure you want to update details?');"
                                     disabled>Update Details</button>
                             </td>
@@ -237,7 +237,7 @@
             <h2>Equipment History</h2>
             <p>List of event related to the equipment history</p>
 
-            <div class="table-scroll" style="border: 1px solid black;">
+            <div id="history-container" class="table-scroll" style="border: 1px solid black;">
                 <table id="equipment-history" style="table-layout: auto; white-space: nowrap;">
                     <thead>
 
@@ -248,7 +248,7 @@
                 </table>
             </div>
             <input type="text" style="text-align: right;" name="equipment-history-stats" id="equipment-history-stats" disabled>
-            <form action="backend-equipment-history/submit.php" method="post">
+            <form id="equipment-history-form" novalidate>
                 <table id="equipment-history-form">
                     <thead>
                         <!-- The header row is hidden but defines the structure of the table for styling purposes. -->
@@ -308,8 +308,11 @@
 
         </div>
     </main>
-    <script src="dcclarity-global-var.js"></script>
-    <script src="dcfm-equipment.js"></script>
+    <script src="js/dcclarity-global-var.js"></script>
+    <script src="js/dcfm-ui.js"></script>
+    <script src="js/dcfm-api.js"></script>
+    <script src="js/dcfm-details.js"></script>
+    <script src="js/dcfm-history.js"></script>
 </body>
 
 </html>

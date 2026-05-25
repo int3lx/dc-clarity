@@ -21,7 +21,7 @@ require_once __DIR__ . '/sequence.php';
  * @return array Created history entry
  * @throws Exception
  */
-function addHistory($equipmentId, $event, $notes, $changes = array(), $createdBy = 'System') {
+function addHistory($equipmentId, $event, $notes, $changes = array(), $createdBy = 'System', $historyDate = '') {
     if (empty($equipmentId) || empty($event)) {
         throw new Exception('Equipment ID and Event are required');
     }
@@ -38,6 +38,7 @@ function addHistory($equipmentId, $event, $notes, $changes = array(), $createdBy
         'equipment_id' => $equipmentId,
         'event' => $event,
         'notes' => $notes,
+        'history_date' => $historyDate,
         'changes' => is_array($changes) ? $changes : array(),
         'created_by' => $createdBy,
         'date_created' => $dateCreated
@@ -216,6 +217,7 @@ function formatHistoryEntry($entry) {
         'equipment_id' => isset($entry['equipment_id']) ? $entry['equipment_id'] : '',
         'event' => isset($entry['event']) ? $entry['event'] : '',
         'notes' => isset($entry['notes']) ? $entry['notes'] : '',
+        'history_date' => isset($entry['history_date']) ? $entry['history_date'] : '',
         'changes' => isset($entry['changes']) ? $entry['changes'] : array(),
         'created_by' => isset($entry['created_by']) ? $entry['created_by'] : '',
         'date_created' => isset($entry['date_created']) ? $entry['date_created'] : ''
